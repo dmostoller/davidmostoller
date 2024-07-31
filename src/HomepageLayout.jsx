@@ -80,8 +80,9 @@ const HomepageHeading = () => (
                         {/* <a href="https://vimeo.com/944678547?share=copy" target='_blank'>
                             <img style={{maxWidth: "700px"}} src={musicThumb}></img>
                         </a> */}
-                        <div style={{padding:"56.25% 0 0 0", position:"relative"}}><iframe src="https://player.vimeo.com/video/944678547?h=de6bb1aa1e" 
-                style={{position:"absolute", top:"0", left:"0", width:"100%", height:"100%"}} frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+                        <div style={{padding:"56.25% 0 0 0", position:"relative"}}><iframe src="https://player.vimeo.com/video/944678547?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" 
+                        style={{position:"absolute", top:"0", left:"0", width:"100%", height:"100%"}} frameborder="0" allow="fullscreen; picture-in-picture" allowfullscreen title="Musician's Base Project Presentation"></iframe></div>
+                        <script src="https://player.vimeo.com/api/player.js"></script>
                         <div style={{marginTop: "15px"}}>
                             <a href="https://github.com/dmostoller/musicians-base" target='_blank'>
                             <button  style={{marginRight: "15px"}} className='ui teal button'>GitHub Repo</button>
@@ -147,9 +148,12 @@ const HomepageHeading = () => (
                 <div className="card">
                     <h3 style={{marginBottom:"0px"}}>Mars Base</h3>
                     <h5 className='grey' style={{marginTop: "0px"}}>A Python CLI Game in the style of Oregon Trail</h5>
-                        <a href="https://vimeo.com/930451133?share=copy" target='_blank'>
+                        {/* <a href="https://vimeo.com/930451133?share=copy" target='_blank'>
                             <img style={{maxWidth: "700px"}} src={marsThumb}></img>
-                        </a>
+                        </a> */}
+                        <div style={{padding:"56.25% 0 0 0", position:"relative"}}><iframe src="https://player.vimeo.com/video/930451133?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" 
+                        style={{position:"absolute", top:"0", left:"0", width:"100%", height:"100%"}} frameborder="0" allow="fullscreen; picture-in-picture" allowfullscreen title="Mars Base - Project Presentation"></iframe></div>
+                        <script src="https://player.vimeo.com/api/player.js"></script>
                         <div style={{marginTop: "15px"}}>
                         <a href="https://github.com/dmostoller/mars-base" target='_blank'>
                             <button className='ui teal button'>GitHub Repo</button>
