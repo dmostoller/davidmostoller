@@ -37,20 +37,12 @@ import { Link, Element, scroller, animateScroll as scroll, scrollSpy } from 'rea
 
 
 
-function calendly() {
-  Calendly.initBadgeWidget({ url: 'https://calendly.com/dmostoller/15-minute-coffee-virtual-chat', text: 'Schedule time with me', color: 'black', textColor: '#ffffff', branding: undefined}); 
-}
-
-//   console.log(darkMode)
-calendly();
-
 
 
 
 const { MediaContextProvider, Media } = createMedia({
   breakpoints: {
-    mobile: 0,
-    tablet: 768,
+    mobile: 768,
     computer: 1024,
   },
 })
