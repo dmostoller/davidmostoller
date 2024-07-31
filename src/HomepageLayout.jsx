@@ -18,16 +18,13 @@ import {
   Segment,
   Sidebar,
 } from 'semantic-ui-react'
+import marsThumb from './assets/thumb.png'
+import resume from './assets/David-Mostoller-Resume-August-2024.pdf'
 import headshot from './assets/david-headshot-amtrak.jpg'
-import mediumLogo from './assets/medium-fill-svgrepo-com.svg/'
-import gitLogo from './assets/github-svgrepo-com-4.svg'
-import linkedInLogo from './assets/linkedin-box-fill-svgrepo-com.svg'
 import Email from './Email';
 import { Navigation, Pagination, Scrollbar, A11y, EffectCube } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import marsThumb from './assets/thumb.png'
-import musicThumb from './assets/thumb-1.png'
-import tutorThumb from './assets/tutorthumb.png'
+
 
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -36,6 +33,7 @@ import 'swiper/css/scrollbar';
 import 'swiper/css/effect-cube';
 import { ToastContainer, toast } from "react-toastify";
 import { Link, Element, scroller, animateScroll as scroll, scrollSpy } from 'react-scroll';
+
 
 
 
@@ -395,7 +393,12 @@ const HomepageLayout = () => (
           <Grid.Column floated='right'width={6}>
             <Image bordered rounded size='massive' src={headshot} />
             <Grid centered style={{marginTop: "25px"}}>
-            <Button icon labelPosition='left' size='huge'>
+            <Button icon labelPosition='left' 
+              size='huge'
+              href={resume}
+              download="David_Mostoller_Resume"
+              content="Download Resume"
+              target='_blank'>
                 <Icon name='download' />
                 My Resume
             </Button>
