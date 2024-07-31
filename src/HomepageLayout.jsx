@@ -274,7 +274,7 @@ class MobileContainer extends Component {
             vertical
             visible={sidebarOpened}
           >
-
+                <div className='item'></div>
                 <Link className='item'
                   activeClass="active" 
                   to="about" 
@@ -323,9 +323,9 @@ class MobileContainer extends Component {
               <Container>
                 <Menu inverted pointing secondary size='massive'>
                   <Menu.Item onClick={this.handleToggle}>
-                    <Icon size='large' name='sidebar' />
+                    <Icon name='sidebar' />
                   </Menu.Item>
-                  <Menu.Item header position='right'>
+                  <Menu.Item header position='right' style={{verticalAlign: "top"}}>
                     DAVID MOSTOLLER
                 </Menu.Item>
                 </Menu>
