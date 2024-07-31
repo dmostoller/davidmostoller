@@ -42,7 +42,8 @@ import { Link, Element, scroller, animateScroll as scroll, scrollSpy } from 'rea
 
 const { MediaContextProvider, Media } = createMedia({
   breakpoints: {
-    mobile: 768,
+    mobile: 0,
+    tablet: 768,
     computer: 1024,
   },
 })
@@ -182,7 +183,7 @@ class DesktopContainer extends Component {
     const { fixed } = this.state
 
     return (
-      <Media greaterThan='mobile'>
+      <Media greaterThan='tablet'>
         <InView onChange={this.toggleFixedMenu}>
           <Segment
             inverted
