@@ -161,7 +161,6 @@ const HomepageHeading = () => (
                     </div>
                 </div>
             </SwiperSlide>
-            ...
         </Swiper>
   </Container>
 )
