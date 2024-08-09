@@ -32,6 +32,8 @@ export default function Bio() {
             <Button icon labelPosition='left' 
               size='huge'
               href={resume}
+              basic
+              secondary
               download="David_Mostoller_Resume"
               content="Download Resume"
               target='_blank'>

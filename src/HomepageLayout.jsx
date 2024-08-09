@@ -87,24 +87,25 @@ const HomepageHeading = () => (
         marginTop: '1.5em',
       }}/>
       <Grid centered style={{marginTop: "25px"}}>
-        <Button icon labelPosition='right' 
+        <Button
           size='large'
           inverted
           href={resume}
           download="David_Mostoller_Resume"
           content="Download Resume"
           target='_blank'>
-            <Icon name='download' />
             My Resume
         </Button>
-        <Button icon labelPosition='right' 
-          size='large'
-          inverted
-          href="/bio">
-            <Icon name='book' />
-            My Bio
-        </Button>
-      </Grid>
+
+        <Link className='ui large inverted button'
+            to="about" 
+            spy={true} 
+            smooth={true} 
+            offset={10} 
+            duration={500} 
+            >My Bio
+        </Link>
+</Grid>
   </Container>
 )
 
@@ -162,20 +163,20 @@ class DesktopContainer extends Component {
                   to="projects" 
                   spy={true} 
                   smooth={true} 
-                  offset={1} 
+                  offset={-75} 
                   duration={500} 
                   onSetActive={handleSetActive}
                   >Projects
                 </Link>
                 <Link className='item'
                   activeClass="active" 
-                  to="contact" 
+                  to="about" 
                   spy={true} 
                   smooth={true} 
-                  offset={50} 
+                  offset={0} 
                   duration={500} 
                   onSetActive={handleSetActive}
-                  >Contact
+                  >Bio
                 </Link>
                 <Menu.Item header position='right'>
                     DAVID MOSTOLLER
@@ -309,45 +310,16 @@ const HomepageLayout = () => (
   
   <ToastContainer/>
 
-  {/* <Bio/> */}
-
-    <Segment basic style={{marginTop: "50px", padding: '0em' }} className='element' name="contact" vertical>
-      <Grid centered stackable>
-        <a href="https://github.com/dmostoller" target="_blank">
-            <Icon link circular inverted basic size='huge' name='github'/>
-        </a>
-        <a href="https://www.linkedin.com/in/david-mostoller/" target="_blank">
-            <Icon link circular inverted size='huge' name='linkedin'/>
-        </a>
-        <a href="https://medium.com/@dmostoller" target="_blank">
-            <Icon link circular inverted size='huge' name='medium'/>
-        </a>
-      </Grid>
-    </Segment>
-
   <Projects /> 
 
-
-    <Segment style={{ padding: '8em 0em' }} basic vertical>
-      <Container text>
-        <Header as='h3' style={{ fontSize: '2em' }}>
-          Get In Touch
-        </Header>
+    <Segment basic style={{marginTop: "50px", marginBottom: "25px", padding: '0em' }} className='element' name="contact" vertical>
+      <Container style={{marginTop: "25px"}} textAlign='center' text>
             <Email/>
       </Container>
     </Segment>
 
-    {/* <Segment inverted vertical style={{ padding: '5em 0em' }}>
-      <Container>
-        <Grid centered inverted stackable>
-          
-            <Button size='huge' as='a' href="https://calendly.com/dmostoller/15-minute-coffee-virtual-chat" inverted target="_blank" style={{ marginLeft: '0.5em' }}>
-                Schedule a call on Calendly
-            </Button>
 
-        </Grid>
-      </Container>
-    </Segment> */}
+    <Bio/>
 
     <Segment inverted vertical style={{ margin: '0em 0em 0em 0em', padding: '5em' }}>
       <Container textAlign='center'>
@@ -390,7 +362,6 @@ const HomepageLayout = () => (
         </Grid>
       </Container>
     </Segment>
-
   </ResponsiveContainer>
 )
 

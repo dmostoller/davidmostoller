@@ -5,10 +5,26 @@ import { useFormik } from "formik";
 import * as yup from "yup";
 import { ToastContainer, toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
+import {
+    ModalHeader,
+    ModalDescription,
+    ModalContent,
+    ModalActions,
+    Button,
+    Modal,
+    MenuItem,
+    Form,
+    Icon,
+    FormField,
+    FormTextArea,
+    
+  } from 'semantic-ui-react'
 
 
 const Email = () => {
     const form = useRef();
+    const [open, setOpen] = useState(false)
+
 
     const formSchema = yup.object().shape({
         from_name: yup.string().required("please enter your name"),
@@ -43,6 +59,18 @@ const Email = () => {
     return (
       <>
       <ToastContainer/>
+      <Modal
+    closeIcon inverted
+    dimmer={"blurring"}
+    size={"small"}
+    onClose={() => setOpen(false)}
+    onOpen={() => setOpen(true)}
+    open={open}
+    trigger={<Button labeled secondary labelPosition='right' size="massive" basic icon><Icon name='mail' />Get In Touch</Button>}
+  > 
+    <ModalHeader>Get In Touch</ModalHeader>
+    <ModalContent>
+      <ModalDescription>
           <form className="ui large form" ref={form} onSubmit={formik.handleSubmit}>
               <div style={{justifyContent: "center"}} className="field">
                   <label>Name</label>
@@ -65,7 +93,9 @@ const Email = () => {
                 <button className="ui secondary fluid large button" type="submit">Send Email</button>
                 }
             </form>
-
+            </ModalDescription>
+    </ModalContent>
+  </Modal>
 
       </>
     )    
