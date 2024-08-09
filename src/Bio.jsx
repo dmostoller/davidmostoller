@@ -34,8 +34,7 @@ export default function Bio() {
               href={resume}
               basic
               secondary
-              download="David_Mostoller_Resume"
-              content="Download Resume"
+              content="My Resume"
               target='_blank'>
                 <Icon name='download' />
                 My Resume
