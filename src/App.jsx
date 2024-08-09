@@ -41,7 +41,6 @@ function App() {
                 inverted
                 icon='download'
                 href={resume}
-                download="David_Mostoller_Resume"
                 target='_blank'
                 // data-inverted="" 
                 data-tooltip="My Resume" 
