@@ -11,7 +11,7 @@ export default function Projects() {
                 <div className="item">
                     <div className="content">
                     <div className="header" style={{marginBottom:"0px"}}>Artist-Fan Interaction & Content Hub</div>
-                    <div className="meta">React, Node.js, Python, Flask, Javascript, SQLAlchemy, RESTful APIs</div>
+                    <div className="meta">React, Python, Flask, Javascript, SQLAlchemy, GeoPy, Cloudinary, PostgreSQL, WaveSurfer, Semantic-UI</div>
                     <div className="description" style={{marginTop: "0px"}}>
                     A dynamic platform that allows artists to create and share content 
                     while engaging with fans through comments, chat forums, and personalized music collections. This project aims to 
@@ -26,7 +26,7 @@ export default function Projects() {
                             <button className='ui basic small secondary button'>Deployed Site</button>
                         </a>
                         <a href="https://vimeo.com/944678547?share=copy" target='_blank'>
-                            <button className='ui secondary small basic button'>Video Walkthrough</button>
+                            <button className='ui secondary small basic button'>Video Demo</button>
                         </a>
                     </div>
                     </div>
@@ -35,7 +35,7 @@ export default function Projects() {
                 <div className="item">
                     <div className="content">
                         <div className='header' style={{marginBottom:"0px"}}>Contextual Video Chatbot Assistant</div>
-                        <div className="meta">React, Node.js, Python, Flask, Javascript, ChatGPT, RESTful APIs</div>
+                        <div className="meta">React, Python, Flask, Javascript, CSS, ChatGPT, Llama-Index</div>
                         <div className="description" style={{marginTop: "0px"}}>A smart tool designed to answer 
                             user queries based on YouTube video content. By integrating video transcripts with ChatGPT and 
                             providing an interactive React front end, this project highlights my commitment to offering 
@@ -48,7 +48,7 @@ export default function Projects() {
                                 <button className='ui basic small secondary button'>Deployed Site</button>
                             </a>
                             <a href="https://www.loom.com/share/54ffdd1cbc394c0c8b0ac4d3a3783097" target='_blank'>
-                                <button className='ui secondary small basic button'>Video Walkthrough</button>
+                                <button className='ui secondary small basic button'>Video Demo</button>
                             </a>
                         </div>
                     </div>
@@ -57,7 +57,7 @@ export default function Projects() {
                 <div className="item">
                     <div className="content">
                         <div className="header" style={{marginBottom:"0px"}}>Interactive Artist Showcase & Engagement Platform</div>
-                        <div className="meta">React, Node.js, Python, Flask, Javascript, SQLAlchemy, RESTful APIs,</div>
+                        <div className="meta">React, Python, Flask, Javascript, SQLAlchemy, Semantic-UI, Cloudinary, PostgreSQL</div>
                         <div className-="description" style={{marginTop: "0px"}}>
                             A platform that enables an artist to showcase their work and engage with their 
                             audience through comments and feedback. This project was created to empower artists by 
@@ -70,7 +70,7 @@ export default function Projects() {
                                     <button className='ui secondary small basic button'>Deployed Site</button>
                                 </a>
                                 <a href="https://www.loom.com/share/6963e453b24648c7863de7ad8d490ec4" target='_blank'>
-                                    <button className='ui basic small secondary button'>Video Walkthrough</button>
+                                    <button className='ui basic small secondary button'>Video Demo</button>
                                 </a>
                         </div>
                     </div>
@@ -79,7 +79,7 @@ export default function Projects() {
                 <div className="item">
                     <div className="content">
                     <div className='header' style={{marginBottom:"0px"}}>Mars Base (Oregon Trail: In Space)</div>
-                    <div className="meta">Python, SQLAlchemy</div>
+                    <div className="meta">Python, SQLAlchemy, Playsound</div>
                     <div className='description' style={{marginTop: "0px"}}>
                     A turn-based command-line interface game that I developed using Python and SQLAlchemy. 
                     This project sharpened my skills in game design, including implementing complex game logic, 
@@ -90,7 +90,7 @@ export default function Projects() {
                             <button className='ui basic secondary small button'>GitHub Repo</button>
                         </a>
                         <a href="https://vimeo.com/930451133?share=copy" target='_blank'>
-                            <button style={{marginRight: "15px"}} className='ui secondary small basic button'>Video Walkthrough</button>
+                            <button style={{marginRight: "15px"}} className='ui secondary small basic button'>Video Demo</button>
                         </a>
                     </div>
                     </div>

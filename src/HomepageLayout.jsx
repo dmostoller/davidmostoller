@@ -60,19 +60,20 @@ const HomepageHeading = () => (
             <div className="ui two column very relaxed stackable grid">
                 <div className="column">
                     <div className="ui left aligned inverted text container segment">
-                        <h2 className="ui inverted header">David Mostoller</h2>   
+                        <h1 className="ui inverted header">David Mostoller</h1>   
                         <h3 className="ui inverted header">Software Engineer & Project Leader</h3> 
+                        <p>dmostoller@gmail.com</p>
                     </div>
                 </div>  
                 <div className='column'>
                     <div className="ui left aligned inverted text container segment">
-                        <p>I am a software engineer and project leader with a focus on: </p>
+                        <p>I'm a software engineer and project leader with a focus on: </p>
                         <p>• crafting collaborative tech solutions </p>
                         <p>• leading diverse teams to drive results </p>
                         <p>• integrating multimedia and user-centered design</p>
 
                         <p>My goal is to unite technology and creativity, 
-                            <br></br>creating impactful products that enhance teamwork 
+                            <br></br>creating impactful products that foster community 
                             <br></br>and drive meaningful user experiences.
                         </p>
                     </div>
@@ -153,11 +154,11 @@ class DesktopContainer extends Component {
                   onSetActive={handleSetActive}
                   >Bio
                 </Link>
-
+                {fixed &&
                 <Menu.Item header position='right'>
                     DAVID MOSTOLLER
                 </Menu.Item>
-
+            }
               </Container>
             </Menu>
 
