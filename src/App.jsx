@@ -2,6 +2,9 @@
 import './App.css'
 import HomepageLayout from './HomepageLayout'
 import { SocialIcon } from 'react-social-icons'
+import { Button } from 'semantic-ui-react'
+import resume from './assets/David-Mostoller-Resume-August-2024.pdf'
+
 
 
 function App() {
@@ -30,6 +33,21 @@ function App() {
                 </div>
                 <div style={{margin: "10px"}}>
                 <SocialIcon className='social-button' target='_blank' url="https://medium.com/@dmostoller" />
+                </div>
+                <div style={{margin: "10px"}}>
+                <Button
+                size='huge'
+                secondary
+                circular
+                inverted
+                icon='download'
+                href={resume}
+                download="David_Mostoller_Resume"
+                target='_blank'
+                // data-inverted="" 
+                data-tooltip="My Resume" 
+                data-position="bottom right">
+                </Button>
                 </div>
             </div>
         </div>

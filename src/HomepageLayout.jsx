@@ -13,13 +13,13 @@ import {
   Header,
   Icon,
   Image,
+  GridColumn,
   List,
   Menu,
   Segment,
   Sidebar,
 } from 'semantic-ui-react'
 import marsThumb from './assets/thumb.png'
-import resume from './assets/David-Mostoller-Resume-August-2024.pdf'
 import Projects from './Projects';
 import Email from './Email';
 import Bio from './Bio';
@@ -55,63 +55,38 @@ const { MediaContextProvider, Media } = createMedia({
  * components for such things.
  */
 const HomepageHeading = () => (
-  <Container text style={{marginTop: "50px"}}>
-    <Header
-      as='h1'
-      content='David Mostoller'
-      inverted
-      style={{
-        fontSize: '4em',
-        fontWeight: 'normal',
-        marginBottom: 0,
-        marginTop: '3em',
-      }}
-    />
-    <Header
-      as='h2'
-      content='Full Stack Software Engineer'
-      inverted
-      style={{
-        fontSize: '1.7em',
-        fontWeight: 'normal',
-        marginTop: '1.5em',
-      }}
-    />
-    <Header
-      as='h2'
-      content='Philadelphia, PA'
-      inverted
-      style={{
-        fontSize: '1.7em',
-        fontWeight: 'normal',
-        marginTop: '1.5em',
-      }}/>
-      <Grid centered style={{marginTop: "25px"}}>
-        <Button
-          size='large'
-          inverted
-          href={resume}
-          download="David_Mostoller_Resume"
-          content="Download Resume"
-          target='_blank'>
-            My Resume
-        </Button>
+  <Container style={{marginTop: "50px"}}>
+        <div className='ui basic segment' style={{marginTop: "100px"}}>
+            <div className="ui two column very relaxed stackable grid">
+                <div className="column">
+                    <div className="ui left aligned inverted text container segment">
+                        <h2 className="ui inverted header">David Mostoller</h2>   
+                        <h3 className="ui inverted header">Software Engineer & Project Leader</h3> 
+                    </div>
+                </div>  
+                <div className='column'>
+                    <div className="ui left aligned inverted text container segment">
+                        <p>I am a software engineer and project leader with a focus on: </p>
+                        <p>• crafting collaborative tech solutions </p>
+                        <p>• leading diverse teams to drive results </p>
+                        <p>• integrating multimedia and user-centered design</p>
 
-        <Link className='ui large inverted button'
-            to="about" 
-            spy={true} 
-            smooth={true} 
-            offset={10} 
-            duration={500} 
-            >My Bio
-        </Link>
-</Grid>
+                        <p>My goal is to unite technology and creativity, 
+                            <br></br>creating impactful products that enhance teamwork 
+                            <br></br>and drive meaningful user experiences.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
   </Container>
 )
 
 HomepageHeading.propTypes = {
   mobile: PropTypes.bool,
 }
+
 const handleSetActive = (to) => {
   console.log(to);
 };
@@ -178,9 +153,11 @@ class DesktopContainer extends Component {
                   onSetActive={handleSetActive}
                   >Bio
                 </Link>
+
                 <Menu.Item header position='right'>
                     DAVID MOSTOLLER
                 </Menu.Item>
+
               </Container>
             </Menu>
 
@@ -331,7 +308,6 @@ const HomepageLayout = () => (
               <List.Item as='a' href="https://github.com/dmostoller" target="_blank">GitHub</List.Item>
               <List.Item as='a' href="https://medium.com/@dmostoller" target="_blank">Medium</List.Item>
               <List.Item as='a' href="https://calendly.com/dmostoller/15-minute-coffee-virtual-chat" target="_blank">Calendly</List.Item>
-              <List.Item as='a' href="https://x.com/dave_mostoller" target="_blank">Twitter</List.Item>
             </List>
           </Grid.Column>
 
