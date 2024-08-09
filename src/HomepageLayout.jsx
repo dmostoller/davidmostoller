@@ -13,15 +13,16 @@ import {
   Header,
   Icon,
   Image,
+  GridColumn,
   List,
   Menu,
   Segment,
   Sidebar,
 } from 'semantic-ui-react'
 import marsThumb from './assets/thumb.png'
-import resume from './assets/David-Mostoller-Resume-August-2024.pdf'
-import headshot from './assets/david-headshot-amtrak.jpg'
+import Projects from './Projects';
 import Email from './Email';
+import Bio from './Bio';
 import { Navigation, Pagination, Scrollbar, A11y, EffectCube } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
@@ -54,120 +55,39 @@ const { MediaContextProvider, Media } = createMedia({
  * components for such things.
  */
 const HomepageHeading = () => (
-  <Container text style={{marginTop: "50px"}}>
-        <Swiper
-            // install Swiper modules
-            modules={[Navigation, Pagination, Scrollbar, A11y, EffectCube]}
-            effect={'cube'}
-            slidesPerView={1}
-            cubeEffect={{
-              shadow: true,
-              slideShadows: true,
-              shadowOffset: 20,
-              shadowScale: 0.94,
-            }}
-            navigation
-            rewind
-            pagination={{ clickable: true }}
-            scrollbar={{ draggable: true }}
-            // onSwiper={(swiper) => console.log(swiper)}
-            // onSlideChange={() => console.log('slide change')}
-            >
-            <SwiperSlide>
-                <div className="card" style={{marginBottom: "50px"}}>
-                    <h3 style={{marginBottom:"0px"}}>Musician's Base</h3>
-                    <h5 className='grey' style={{marginTop: "0px"}}>A Social Fanpage for Independent Musicians</h5>
-                        {/* <a href="https://vimeo.com/944678547?share=copy" target='_blank'>
-                            <img style={{maxWidth: "700px"}} src={musicThumb}></img>
-                        </a> */}
-                        <div style={{padding:"56.25% 0 0 0", position:"relative"}}><iframe src="https://player.vimeo.com/video/944678547?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" 
-                        style={{position:"absolute", top:"0", left:"0", width:"100%", height:"100%"}} frameborder="0" allow="fullscreen; picture-in-picture" allowfullscreen title="Musician's Base Project Presentation"></iframe></div>
-                        <script src="https://player.vimeo.com/api/player.js"></script>
-                        <div style={{marginTop: "15px"}}>
-                            <a href="https://github.com/dmostoller/musicians-base" target='_blank'>
-                            <button  style={{marginRight: "15px"}} className='ui teal button'>GitHub Repo</button>
-                            </a>
-                            <a href="https://superluminalpsy.com/" target='_blank'>
-                            <button className='ui violet button'>Deployed Site</button>
-                        </a>
+  <Container style={{marginTop: "50px"}}>
+        <div className='ui basic segment' style={{marginTop: "100px"}}>
+            <div className="ui two column very relaxed stackable grid">
+                <div className="column">
+                    <div className="ui left aligned inverted text container segment">
+                        <h1 className="ui inverted header">David Mostoller</h1>   
+                        <h3 className="ui inverted header">Software Engineer & Project Leader</h3> 
+                        <p>dmostoller@gmail.com</p>
                     </div>
-                </div>
-            </SwiperSlide>
-            <SwiperSlide>
-                <div className="card">
-                    <h3 style={{marginBottom:"0px"}}>TutorBot</h3>
-                    <h5 className='grey' style={{marginTop: "0px"}}>ChatGPT Assistant for Youtube Playlists</h5>
-                    {/* <a href="https://www.loom.com/share/54ffdd1cbc394c0c8b0ac4d3a3783097" target='_blank'>
-                            <img style={{maxWidth: "700px"}} src="https://cdn.loom.com/sessions/thumbnails/54ffdd1cbc394c0c8b0ac4d3a3783097-with-play.gif"></img>
-                        </a> */}
-                        <div 
-                            style={{position: "relative", paddingBottom: "60%", height: "0"}}>
-                            <iframe src="https://www.loom.com/embed/54ffdd1cbc394c0c8b0ac4d3a3783097?sid=7230f8a1-696f-429a-b30f-a72c9b5676aa" 
-                            frameborder="0" 
-                            style={{position: "absolute", top: "0", left: "0", width: "100%", height: "100%"}}
-                            >
-                            </iframe>
-                        </div>
+                </div>  
+                <div className='column'>
+                    <div className="ui left aligned inverted text container segment">
+                        <p>I'm a software engineer and project leader with a focus on: </p>
+                        <p>• crafting collaborative tech solutions </p>
+                        <p>• leading diverse teams to drive results </p>
+                        <p>• integrating multimedia and user-centered design</p>
 
-                        <div style={{marginTop: "15px"}}>
-                        <a href="https://github.com/dmostoller/youtube-playlist-chatbot" target='_blank'>
-                            <button style={{marginRight: "15px"}} className='ui teal button'>GitHub Repo</button>
-                        </a>
-                        <a href="https://superluminalpsy.com/learn" target='_blank'>
-                            <button className='ui violet button'>Deployed Site</button>
-                        </a>
+                        <p>My goal is to unite technology and creativity, 
+                            <br></br>creating impactful products that foster community 
+                            <br></br>and drive meaningful user experiences.
+                        </p>
                     </div>
                 </div>
-            </SwiperSlide>
-            <SwiperSlide>
-                <div className="card">
-                    <h3 style={{marginBottom:"0px"}}>Social Art Portfolio</h3>
-                    <h5 className='grey' style={{marginTop: "0px"}}>A Fresh Take on an Artist Portfolio</h5>
-                        {/* <a href="https://www.loom.com/share/6963e453b24648c7863de7ad8d490ec4" target='_blank'>
-                            <img style={{maxWidth: "700px"}} src="https://cdn.loom.com/sessions/thumbnails/6963e453b24648c7863de7ad8d490ec4-with-play.gif"></img>
-                        </a> */}
-                        <div 
-                            style={{position: "relative", paddingBottom: "60%", height: "0"}}>
-                            <iframe src="https://www.loom.com/embed/6963e453b24648c7863de7ad8d490ec4?sid=8e6a6ad8-31de-43d7-abfa-9e89c8fdd76a" 
-                            frameborder="0" 
-                            style={{position: "absolute", top: "0", left: "0", width: "100%", height: "100%"}}
-                            >
-                            </iframe>
-                        </div>
-                        <div style={{marginTop: "15px"}}>
-                        <a href="https://github.com/dmostoller/social-artist-portfolio" target='_blank'>
-                            <button style={{marginRight: "15px"}} className='ui teal button'>GitHub Repo</button>
-                        </a>
-                        <a href="https://yasminmostoller.com/" target='_blank'>
-                            <button className='ui violet button'>Deployed Site</button>
-                        </a>
-                    </div>
-                </div>
-            </SwiperSlide>
-            <SwiperSlide>
-                <div className="card">
-                    <h3 style={{marginBottom:"0px"}}>Mars Base</h3>
-                    <h5 className='grey' style={{marginTop: "0px"}}>A Python CLI Game in the style of Oregon Trail</h5>
-                        {/* <a href="https://vimeo.com/930451133?share=copy" target='_blank'>
-                            <img style={{maxWidth: "700px"}} src={marsThumb}></img>
-                        </a> */}
-                        <div style={{padding:"56.25% 0 0 0", position:"relative"}}><iframe src="https://player.vimeo.com/video/930451133?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" 
-                        style={{position:"absolute", top:"0", left:"0", width:"100%", height:"100%"}} frameborder="0" allow="fullscreen; picture-in-picture" allowfullscreen title="Mars Base - Project Presentation"></iframe></div>
-                        <script src="https://player.vimeo.com/api/player.js"></script>
-                        <div style={{marginTop: "15px"}}>
-                        <a href="https://github.com/dmostoller/mars-base" target='_blank'>
-                            <button className='ui teal button'>GitHub Repo</button>
-                        </a>
-                    </div>
-                </div>
-            </SwiperSlide>
-        </Swiper>
+            </div>
+        </div>
+    
   </Container>
 )
 
 HomepageHeading.propTypes = {
   mobile: PropTypes.bool,
 }
+
 const handleSetActive = (to) => {
   console.log(to);
 };
@@ -186,14 +106,14 @@ class DesktopContainer extends Component {
     const { fixed } = this.state
 
     return (
-      <Media greaterThan='tablet'>
+      <Media greaterThan='mobile'>
         <InView onChange={this.toggleFixedMenu}>
           <Segment
             inverted
             textAlign='center'
             style={{ minHeight: 700, padding: '1em 0em' }}
             vertical
-            className='element' name='projects'
+            className='element' name='home'
           >
             <Menu
               fixed={fixed ? 'top' : null}
@@ -206,13 +126,13 @@ class DesktopContainer extends Component {
               <Container>
                 <Link className='item'
                   activeClass="active" 
-                  to="about" 
+                  to="home" 
                   spy={true} 
                   smooth={true} 
-                  offset={1} 
+                  offset={-75} 
                   duration={500} 
                   onSetActive={handleSetActive}
-                  >About Me
+                  >Home
                 </Link>
                 <Link className='item'
                   activeClass="active" 
@@ -226,17 +146,19 @@ class DesktopContainer extends Component {
                 </Link>
                 <Link className='item'
                   activeClass="active" 
-                  to="contact" 
+                  to="about" 
                   spy={true} 
                   smooth={true} 
-                  offset={50} 
+                  offset={0} 
                   duration={500} 
                   onSetActive={handleSetActive}
-                  >Contact
+                  >Bio
                 </Link>
+                {fixed &&
                 <Menu.Item header position='right'>
                     DAVID MOSTOLLER
                 </Menu.Item>
+            }
               </Container>
             </Menu>
 
@@ -365,79 +287,17 @@ const HomepageLayout = () => (
   <ResponsiveContainer>
   
   <ToastContainer/>
-  <Segment style={{ padding: '6em 0em' }}  className='element' name="about" basic vertical>
-      <Grid container stackable verticalAlign='middle'>
-        <Grid.Row>
-          <Grid.Column width={10}>
-            <Header as='h4' style={{ fontSize: '1.75em', color:"gray"}}>Full Stack Software Engineer
-                <br></br><span style={{fontSize:'0.75em', color:"gray"}}>Philadelphia, PA</span>
-            </Header>
-            
-            <p style={{ fontSize: '1.2em' }}>Thank you for visiting my website! I am a software engineer with a rich background in music, combining technical skills with creative flair to drive innovative projects. I excel at crafting user-centric applications that harmonize form and function. My mission is simple: to build meaningful software applications that make a positive impact.</p>
-            <p style={{ fontSize: '1.2em' }}>I have experience developing robust web applications and effectively collaborating with senior leadership and leading teams to design, test, and deploy software. </p>
-            <p style={{ fontSize: '1.2em' }}>Additionally, I oversaw the development of a customer-facing website and integrated web-based layout tools. I also contributed to data analysis and strategy, utilizing MapBox and other tools to create interactive maps and charts that supported executive decision-making and attracted investors.</p>
-            <p style={{ fontSize: '1.2em' }}>My adaptability to new technologies and meticulous attention to detail drive my success in creating impactful software solutions. I thrive in fast-paced environments and have extensive experience working with teams of diverse skill sets, nationalities, and communication styles.</p>
-            <p style={{ fontSize: '1.2em' }}>My career as a professional musician, which took me to over 40 countries, parallels programming in its blend of creativity and teamwork. Both fields require transforming abstract ideas into tangible results and working closely with others to create something exceptional. This background gives me a unique perspective on user experience and problem-solving.</p>
-            <p style={{ fontSize: '1.2em' }}>I am eager to leverage my diverse experiences to build meaningful software applications that make a positive difference. Let’s connect and explore how we can collaborate to create something extraordinary!</p>
-            <p style={{ fontSize: '1.2em', textAlign: "center" }}>
-              <a href="https://calendly.com/dmostoller/15-minute-coffee-virtual-chat" target='_blank'>
-              Schedule a call on Calendly
-              </a>
-            </p>
 
-          </Grid.Column>
-          <Grid.Column floated='right'width={6}>
-            <Image bordered circular size='massive' src={headshot} />
-            <Grid centered style={{marginTop: "25px"}}>
-            <Button icon labelPosition='left' 
-              size='huge'
-              href={resume}
-              download="David_Mostoller_Resume"
-              content="Download Resume"
-              target='_blank'>
-                <Icon name='download' />
-                My Resume
-            </Button>
-            </Grid>
-          </Grid.Column>
-        </Grid.Row>
-      </Grid>
-    </Segment>
+  <Projects /> 
 
-    <Segment basic style={{ padding: '0em' }} className='element' name="contact" vertical>
-      <Grid centered stackable>
-        <a href="https://github.com/dmostoller" target="_blank">
-            <Icon link circular inverted basic size='huge' name='github'/>
-        </a>
-        <a href="https://www.linkedin.com/in/david-mostoller/" target="_blank">
-            <Icon link circular inverted size='huge' name='linkedin'/>
-        </a>
-        <a href="https://medium.com/@dmostoller" target="_blank">
-            <Icon link circular inverted size='huge' name='medium'/>
-        </a>
-      </Grid>
-    </Segment>
-
-    <Segment style={{ padding: '8em 0em' }} basic vertical>
-      <Container text>
-        <Header as='h3' style={{ fontSize: '2em' }}>
-          Get In Touch
-        </Header>
+    <Segment basic style={{marginTop: "50px", marginBottom: "0px", padding: '0em' }} className='element' name="contact" vertical>
+      <Container textAlign='center' text>
             <Email/>
       </Container>
     </Segment>
 
-    {/* <Segment inverted vertical style={{ padding: '5em 0em' }}>
-      <Container>
-        <Grid centered inverted stackable>
-          
-            <Button size='huge' as='a' href="https://calendly.com/dmostoller/15-minute-coffee-virtual-chat" inverted target="_blank" style={{ marginLeft: '0.5em' }}>
-                Schedule a call on Calendly
-            </Button>
 
-        </Grid>
-      </Container>
-    </Segment> */}
+    <Bio/>
 
     <Segment inverted vertical style={{ margin: '0em 0em 0em 0em', padding: '5em' }}>
       <Container textAlign='center'>
@@ -449,7 +309,6 @@ const HomepageLayout = () => (
               <List.Item as='a' href="https://github.com/dmostoller" target="_blank">GitHub</List.Item>
               <List.Item as='a' href="https://medium.com/@dmostoller" target="_blank">Medium</List.Item>
               <List.Item as='a' href="https://calendly.com/dmostoller/15-minute-coffee-virtual-chat" target="_blank">Calendly</List.Item>
-              <List.Item as='a' href="https://x.com/dave_mostoller" target="_blank">Twitter</List.Item>
             </List>
           </Grid.Column>
 
@@ -480,7 +339,6 @@ const HomepageLayout = () => (
         </Grid>
       </Container>
     </Segment>
-
   </ResponsiveContainer>
 )
 
