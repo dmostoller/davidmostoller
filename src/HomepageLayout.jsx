@@ -130,7 +130,7 @@ class DesktopContainer extends Component {
     const { fixed } = this.state
 
     return (
-      <Media greaterThan='tablet'>
+      <Media greaterThan='mobile'>
         <InView onChange={this.toggleFixedMenu}>
           <Segment
             inverted
@@ -312,8 +312,8 @@ const HomepageLayout = () => (
 
   <Projects /> 
 
-    <Segment basic style={{marginTop: "50px", marginBottom: "25px", padding: '0em' }} className='element' name="contact" vertical>
-      <Container style={{marginTop: "25px"}} textAlign='center' text>
+    <Segment basic style={{marginTop: "50px", marginBottom: "0px", padding: '0em' }} className='element' name="contact" vertical>
+      <Container textAlign='center' text>
             <Email/>
       </Container>
     </Segment>

@@ -27,7 +27,7 @@ export default function Bio() {
 
           </Grid.Column>
           <Grid.Column floated='right'width={6}>
-            <Image bordered circular size='massive' src={headshot} />
+            <Image bordered centered circular size='medium' src={headshot} />
             <Grid centered style={{marginTop: "25px"}}>
             <Button icon labelPosition='left' 
               size='huge'
