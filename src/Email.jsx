@@ -44,11 +44,12 @@ const Email = () => {
             emailjs.sendForm('service_jz3d31c', 'template_sau8r19', form.current, {
                 publicKey: '2CBV5usGCJRMr4WbB',
             }).then(() => {
-                    toast.dark("Your Message Has Been Sent")
+                    toast.success("Your Message Has Been Sent")
                     formik.resetForm()
                     setLoading(false)
+                    setOpen(false)
                 }, (error) => {
-                    toast.dark("Your Message Cannot Be Sent", error.text)
+                    toast.error("Your Message Cannot Be Sent", error.text)
                     setLoading(false)
                 });
         },
