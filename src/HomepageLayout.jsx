@@ -1,38 +1,25 @@
 /* eslint-disable max-classes-per-file */
 /* eslint-disable react/no-multi-comp */
 import { createMedia } from '@artsy/fresnel'
-import emailjs from '@emailjs/browser';
 import PropTypes from 'prop-types'
-import React, { Component, useEffect } from 'react'
+import React, { Component } from 'react'
 import { InView } from 'react-intersection-observer'
 import {
-  Button,
   Container,
-  Divider,
   Grid,
   Header,
   Icon,
-  Image,
-  GridColumn,
   List,
   Menu,
   Segment,
   Sidebar,
 } from 'semantic-ui-react'
-import marsThumb from './assets/thumb.png'
 import Projects from './Projects';
 import Email from './Email';
 import Bio from './Bio';
-import { Navigation, Pagination, Scrollbar, A11y, EffectCube } from 'swiper/modules';
-import { Swiper, SwiperSlide } from 'swiper/react';
 
 
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
-import 'swiper/css/scrollbar';
-import 'swiper/css/effect-cube';
-import { ToastContainer, toast } from "react-toastify";
+import { ToastContainer } from "react-toastify";
 import { Link, Element, scroller, animateScroll as scroll, scrollSpy } from 'react-scroll';
 
 
