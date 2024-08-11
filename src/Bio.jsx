@@ -1,5 +1,5 @@
 import { Segment, Grid, Header, Button, Image, Icon } from "semantic-ui-react";
-import resume from './assets/David-Mostoller-SE-Resume-Web.pdf'
+import resume from './assets/David-Mostoller-Resume-UPDATE.pdf'
 import headshot from './assets/david-headshot-amtrak.jpg'
 
 export default function Bio() {

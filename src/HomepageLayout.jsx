@@ -189,15 +189,15 @@ class MobileContainer extends Component {
                 <div className='item'></div>
                 <Link className='item'
                   activeClass="active" 
-                  to="about" 
+                  to="home" 
                   spy={true} 
                   smooth={true} 
-                  offset={1} 
+                  offset={-75} 
                   duration={500}
                   style={{fontSize: "1.5em"}}
                   onClick={this.handleSidebarHide} 
                   onSetActive={handleSetActive}
-                  >About Me
+                  >Home
                 </Link>
                 <Link className='item'
                   activeClass="active" 
@@ -213,15 +213,15 @@ class MobileContainer extends Component {
                 </Link>
                 <Link className='item'
                   activeClass="active" 
-                  to="contact" 
+                  to="about" 
                   spy={true} 
                   smooth={true} 
-                  offset={50} 
+                  offset={0} 
                   duration={500}
                   style={{fontSize: "1.5em"}} 
                   onSetActive={handleSetActive}
                   onClick={this.handleSidebarHide} 
-                  >Contact
+                  >Bio
                 </Link>
           </Sidebar>
 
@@ -238,7 +238,7 @@ class MobileContainer extends Component {
                     <Icon name='sidebar' />
                   </Menu.Item>
                   <Menu.Item header position='right' style={{verticalAlign: "top"}}>
-                    DAVID MOSTOLLER
+                    {/* DAVID MOSTOLLER */}
                 </Menu.Item>
                 </Menu>
               </Container>
