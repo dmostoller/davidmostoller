@@ -20,13 +20,13 @@ export default function Projects() {
                     </div>
                     <div className='extra'>
                             <a href="https://github.com/dmostoller/musicians-base" target='_blank'>
-                            <button className='ui basic small secondary button'>GitHub Repo</button>
+                            <button className='ui basic small secondary button'><i className="github icon"></i>GitHub</button>
                             </a>
                             <a href="https://superluminalpsy.com/" target='_blank'>
-                            <button className='ui basic small secondary button'>Deployed Site</button>
+                            <button className='ui basic small secondary button'><i className="laptop code icon"></i>Website</button>
                         </a>
                         <a href="https://vimeo.com/944678547?share=copy" target='_blank'>
-                            <button className='ui secondary small basic button'>Video Demo</button>
+                            <button className='ui secondary small basic button'><i className="video icon"></i>Video</button>
                         </a>
                     </div>
                     </div>
@@ -42,13 +42,13 @@ export default function Projects() {
                             students personalized support and enhancing their learning experience through advanced AI technology.</div>
                         <div className='extra'>
                             <a href="https://github.com/dmostoller/youtube-playlist-chatbot" target='_blank'>
-                                <button className='ui basic small secondary button'>GitHub Repo</button>
+                                <button className='ui basic small secondary button'><i className="github icon"></i>GitHub</button>
                             </a>
                             <a href="https://superluminalpsy.com/learn" target='_blank'>
-                                <button className='ui basic small secondary button'>Deployed Site</button>
+                                <button className='ui basic small secondary button'><i className="laptop code icon"></i>Website</button>
                             </a>
                             <a href="https://www.loom.com/share/54ffdd1cbc394c0c8b0ac4d3a3783097" target='_blank'>
-                                <button className='ui secondary small basic button'>Video Demo</button>
+                                <button className='ui secondary small basic button'><i className="video icon"></i>Video</button>
                             </a>
                         </div>
                     </div>
@@ -64,13 +64,13 @@ export default function Projects() {
                             providing them with a professional yet interactive online presence.</div>
                             <div className='extra content'>
                                 <a href="https://github.com/dmostoller/social-artist-portfolio" target='_blank'>
-                                    <button className='ui secondary small basic button'>GitHub Repo</button>
+                                    <button className='ui secondary small basic button'><i className="github icon"></i>GitHub</button>
                                 </a>
                                 <a href="https://yasminmostoller.com/" target='_blank'>
-                                    <button className='ui secondary small basic button'>Deployed Site</button>
+                                    <button className='ui secondary small basic button'><i className="laptop code icon"></i>Website</button>
                                 </a>
                                 <a href="https://www.loom.com/share/6963e453b24648c7863de7ad8d490ec4" target='_blank'>
-                                    <button className='ui basic small secondary button'>Video Demo</button>
+                                    <button className='ui basic small secondary button'><i className="video icon"></i>Video</button>
                                 </a>
                         </div>
                     </div>
@@ -87,10 +87,10 @@ export default function Projects() {
                     </div>
                     <div className="description">
                         <a href="https://github.com/dmostoller/mars-base" target='_blank'>
-                            <button className='ui basic secondary small button'>GitHub Repo</button>
+                            <button className='ui basic secondary small button'><i className="github icon"></i>GitHub</button>
                         </a>
                         <a href="https://vimeo.com/930451133?share=copy" target='_blank'>
-                            <button style={{marginRight: "15px"}} className='ui secondary small basic button'>Video Demo</button>
+                            <button style={{marginRight: "15px"}} className='ui secondary small basic button'><i className="video icon"></i>Video</button>
                         </a>
                     </div>
                     </div>

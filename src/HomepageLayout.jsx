@@ -1,38 +1,25 @@
 /* eslint-disable max-classes-per-file */
 /* eslint-disable react/no-multi-comp */
 import { createMedia } from '@artsy/fresnel'
-import emailjs from '@emailjs/browser';
 import PropTypes from 'prop-types'
-import React, { Component, useEffect } from 'react'
+import React, { Component } from 'react'
 import { InView } from 'react-intersection-observer'
 import {
-  Button,
   Container,
-  Divider,
   Grid,
   Header,
   Icon,
-  Image,
-  GridColumn,
   List,
   Menu,
   Segment,
   Sidebar,
 } from 'semantic-ui-react'
-import marsThumb from './assets/thumb.png'
 import Projects from './Projects';
 import Email from './Email';
 import Bio from './Bio';
-import { Navigation, Pagination, Scrollbar, A11y, EffectCube } from 'swiper/modules';
-import { Swiper, SwiperSlide } from 'swiper/react';
 
 
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
-import 'swiper/css/scrollbar';
-import 'swiper/css/effect-cube';
-import { ToastContainer, toast } from "react-toastify";
+import { ToastContainer } from "react-toastify";
 import { Link, Element, scroller, animateScroll as scroll, scrollSpy } from 'react-scroll';
 
 
@@ -202,15 +189,15 @@ class MobileContainer extends Component {
                 <div className='item'></div>
                 <Link className='item'
                   activeClass="active" 
-                  to="about" 
+                  to="home" 
                   spy={true} 
                   smooth={true} 
-                  offset={1} 
+                  offset={-75} 
                   duration={500}
                   style={{fontSize: "1.5em"}}
                   onClick={this.handleSidebarHide} 
                   onSetActive={handleSetActive}
-                  >About Me
+                  >Home
                 </Link>
                 <Link className='item'
                   activeClass="active" 
@@ -226,15 +213,15 @@ class MobileContainer extends Component {
                 </Link>
                 <Link className='item'
                   activeClass="active" 
-                  to="contact" 
+                  to="about" 
                   spy={true} 
                   smooth={true} 
-                  offset={50} 
+                  offset={0} 
                   duration={500}
                   style={{fontSize: "1.5em"}} 
                   onSetActive={handleSetActive}
                   onClick={this.handleSidebarHide} 
-                  >Contact
+                  >Bio
                 </Link>
           </Sidebar>
 
@@ -251,7 +238,7 @@ class MobileContainer extends Component {
                     <Icon name='sidebar' />
                   </Menu.Item>
                   <Menu.Item header position='right' style={{verticalAlign: "top"}}>
-                    DAVID MOSTOLLER
+                    {/* DAVID MOSTOLLER */}
                 </Menu.Item>
                 </Menu>
               </Container>

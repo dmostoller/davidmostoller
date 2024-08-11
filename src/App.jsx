@@ -3,7 +3,7 @@ import './App.css'
 import HomepageLayout from './HomepageLayout'
 import { SocialIcon } from 'react-social-icons'
 import { Button } from 'semantic-ui-react'
-import resume from './assets/David-Mostoller-Resume-August-2024.pdf'
+import resume from './assets/David-Mostoller-Resume-UPDATE.pdf'
 
 
 
@@ -25,18 +25,21 @@ function App() {
         <div className='ui one column grid'>
             <div className='column'>
                 <div style={{margin: "10px"}}  
-                data-tooltip="My LinkedIn" 
-                data-position="top right">
+                // data-tooltip="My LinkedIn" 
+                // data-position="top right"
+                >
                 <SocialIcon className='social-button' target='_blank' url="https://www.linkedin.com/in/david-mostoller/" />
                 </div>
                 <div style={{margin: "10px"}}  
-                data-tooltip="My GitHub" 
-                data-position="top right">
+                // data-tooltip="My GitHub" 
+                // data-position="top right"
+                >
                 <SocialIcon className='social-button' target='_blank' url="https://github.com/dmostoller" />
                 </div>
                 <div style={{margin: "10px"}}  
-                data-tooltip="My Blog" 
-                data-position="bottom right">
+                // data-tooltip="My Blog" 
+                // data-position="bottom right"
+                >
                 <SocialIcon className='social-button' target='_blank' url="https://medium.com/@dmostoller" />
                 </div>
                 <div style={{margin: "10px"}}>
