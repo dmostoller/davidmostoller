@@ -26,17 +26,20 @@ export default function MusiciansBase() {
                     <div className='ui fluid basic padded inverted compact segment' style={{marginTop: "50px"}}>
                         <div className="content">
                             <div className="header">
-                                <h1>Artist-Fan Interaction & Content Hub</h1>
+                            <h1 style={{marginBottom: "0px"}}>Musician's Base</h1>
+                            <h2 style={{marginTop: "0px"}}>Artist-Fan Interaction & Content Hub</h2>
                             </div>
                             <div className="meta" style={{paddingTop: "10px"}}>
-                                <h4 style={{color: "grey"}}>React, Python, Flask, Javascript, SQLAlchemy, GeoPy, Cloudinary, PostgreSQL, WaveSurfer, Semantic-UI</h4>
+                                <h3 style={{color: "grey"}}>
+                                    React, Python, Flask, Javascript, SQLAlchemy, GeoPy, Cloudinary, PostgreSQL, WaveSurfer, Semantic-UI
+                                </h3>
                             </div>
                             <div className="description" style={{paddingTop: "10px"}}>
-                                <h4>
+                                <h3>
                                 A dynamic user experience platform for artists to create and share
                                 content while engaging with fans through interactive features like chat
                                 forums and personalized music collections.
-                                </h4>
+                                </h3>
                             </div>
                         </div>
                     </div>
