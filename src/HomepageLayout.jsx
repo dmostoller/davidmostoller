@@ -23,11 +23,6 @@ import { ToastContainer } from "react-toastify";
 import { Link, Element, scroller, animateScroll as scroll, scrollSpy } from 'react-scroll';
 
 
-
-
-
-
-
 const { MediaContextProvider, Media } = createMedia({
   breakpoints: {
     mobile: 0,
@@ -37,10 +32,7 @@ const { MediaContextProvider, Media } = createMedia({
 })
 
 
-/* Heads up!
- * HomepageHeading uses inline styling, however it's not the best practice. Use CSS or styled
- * components for such things.
- */
+
 const HomepageHeading = () => (
   <Container style={{marginTop: "50px"}}>
         <div className='ui basic segment' style={{marginTop: "100px"}}>
@@ -55,12 +47,12 @@ const HomepageHeading = () => (
                 <div className='column'>
                     <div className="ui left aligned inverted text container segment">
                         <p>I'm a software engineer and project leader with a focus on: </p>
-                        <p>• crafting collaborative tech solutions </p>
-                        <p>• leading diverse teams to drive results </p>
-                        <p>• integrating multimedia and user-centered design</p>
+                        <p style={{textIndent: "20px"}}> • leading diverse teams to drive results </p>
+                        <p style={{textIndent: "20px"}}> • crafting tech solutions that foster collaboration </p>
+                        <p style={{textIndent: "20px"}}> • integrating multimedia and user-centered design</p>
 
                         <p>My goal is to unite technology and creativity, 
-                            <br></br>creating impactful products that foster community 
+                            <br></br>creating impactful products that nurture community 
                             <br></br>and drive meaningful user experiences.
                         </p>
                     </div>
@@ -76,13 +68,9 @@ HomepageHeading.propTypes = {
 }
 
 const handleSetActive = (to) => {
-  console.log(to);
+  // console.log(to);
 };
 
-/* Heads up!
- * Neither Semantic UI nor Semantic UI React offer a responsive navbar, however, it can be implemented easily.
- * It can be more complicated, but you can create really flexible markup.
- */
 class DesktopContainer extends Component {
   state = {}
 
