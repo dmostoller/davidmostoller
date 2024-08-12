@@ -4,6 +4,8 @@ import HomepageLayout from './HomepageLayout'
 import { SocialIcon } from 'react-social-icons'
 import { Button } from 'semantic-ui-react'
 import resume from './assets/David-Mostoller-SE-Resume-Web-New.pdf'
+import { Outlet } from "react-router-dom";
+
 
 
 
@@ -18,10 +20,9 @@ function App() {
   
   return (
     <>
-      <div className='ui fluid container'>
-          <HomepageLayout/>
-      </div>
-      <div className='social-sidebar'>
+     <div lassName='ui fluid container' id='detail'>
+        <Outlet/>
+        <div className='social-sidebar'>
         <div className='ui one column grid'>
             <div className='column'>
                 <div style={{margin: "10px"}}  
@@ -59,6 +60,8 @@ function App() {
             </div>
         </div>
       </div>
+      </div>
+      
     </>
   )
 }

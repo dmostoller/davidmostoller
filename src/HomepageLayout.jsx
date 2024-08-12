@@ -18,7 +18,6 @@ import Projects from './Projects';
 import Email from './Email';
 import Bio from './Bio';
 
-
 import { ToastContainer } from "react-toastify";
 import { Link, Element, scroller, animateScroll as scroll, scrollSpy } from 'react-scroll';
 
@@ -36,27 +35,20 @@ const { MediaContextProvider, Media } = createMedia({
 const HomepageHeading = () => (
   <Container style={{marginTop: "50px"}}>
         <div className='ui basic segment' style={{marginTop: "100px"}}>
-            <div className="ui two column very relaxed stackable grid">
+            <div className="ui very relaxed stackable grid">
                 <div className="column">
                     <div className="ui left aligned inverted text container segment">
-                        <h1 className="ui inverted header">David Mostoller</h1>   
-                        <h3 className="ui inverted header">Software Engineer & Project Leader</h3> 
-                        <p>dmostoller@gmail.com</p>
+                        {/* <h1 className="ui inverted header" style={{margin: "0px",fontSize: "3em"}}>Hi</h1> */}
+                        <h1 className='ui inverted header' style={{marginTop: "0px", marginBottom: "0px", fontSize: "3em"}}>I'm Dave,</h1>   
+                        <h1 className="ui inverted header" style={{marginTop: "0px", fontSize: "3em", color: "orange"}}>full-stack web developer</h1> 
+                        <div className='ui huge circular orange button' style={{marginTop: "25px"}} onClick={() => scroller.scrollTo('projects', {
+                          duration: 500,
+                          delay: 0,
+                          offset: -75,
+                          smooth: 'easeInOutQuart'
+                        })}>Discover My Projects</div>
                     </div>
                 </div>  
-                <div className='column'>
-                    <div className="ui left aligned inverted text container segment">
-                        <p>I'm a software engineer and project leader with a focus on: </p>
-                        <p style={{textIndent: "20px"}}> • leading diverse teams to drive results </p>
-                        <p style={{textIndent: "20px"}}> • crafting tech solutions that foster collaboration </p>
-                        <p style={{textIndent: "20px"}}> • integrating multimedia and user-centered design</p>
-
-                        <p>My goal is to unite technology and creativity, 
-                            <br></br>creating impactful products that nurture community 
-                            <br></br>and drive meaningful user experiences.
-                        </p>
-                    </div>
-                </div>
             </div>
         </div>
     
@@ -127,7 +119,7 @@ class DesktopContainer extends Component {
                   offset={0} 
                   duration={500} 
                   onSetActive={handleSetActive}
-                  >Bio
+                  >About
                 </Link>
                 {fixed &&
                 <Menu.Item header position='right'>
@@ -209,7 +201,7 @@ class MobileContainer extends Component {
                   style={{fontSize: "1.5em"}} 
                   onSetActive={handleSetActive}
                   onClick={this.handleSidebarHide} 
-                  >Bio
+                  >About
                 </Link>
           </Sidebar>
 
