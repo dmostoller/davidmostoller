@@ -67,7 +67,7 @@ const Email = () => {
     onClose={() => setOpen(false)}
     onOpen={() => setOpen(true)}
     open={open}
-    trigger={<Button labeled secondary labelPosition='right' size="massive" basic icon><Icon name='mail' />Get In Touch</Button>}
+    trigger={<Button circular labelPosition='right' fluid size="massive" basic icon><Icon name='mail' />Get In Touch</Button>}
   > 
     <ModalHeader>Get In Touch</ModalHeader>
     <ModalContent>
@@ -91,7 +91,7 @@ const Email = () => {
                 { loading ?
                 <button className="ui basic fluid large loading button" type="submit">Send Email</button>
                 :
-                <button className="ui secondary fluid large button" type="submit">Send Email</button>
+                <button className="ui circular secondary fluid large button" type="submit">Send Email</button>
                 }
             </form>
             </ModalDescription>
