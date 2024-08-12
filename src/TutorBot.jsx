@@ -51,7 +51,7 @@ export default function TutorBot() {
                     </div>
                 </div>
                 <div className='ui center aligned container'>
-                    <h2 className="ui left aligned inverted header" style={{marginTop: "25px"}}>Some photos of the project</h2>
+                    <h2 className="ui left aligned inverted header" style={{marginTop: "25px"}}></h2>
                     <div className='ui doubling stackable three column centered grid' style={{marginTop: "25px"}}>
                         <div className='column'>
                             <img className="ui rounded bordered image" src={m1} alt='1'></img>
@@ -68,7 +68,7 @@ export default function TutorBot() {
                 <div className='ui centered grid' style={{marginTop: "50px", marginBottom: "50px"}}>
                         <HashLink to='/#projects' 
                          scroll={el => { el.scrollIntoView(true); window.scrollBy(0, -75) }}
-                        className="ui huge circular orange button">See More Projects</HashLink>
+                        className="ui huge circular orange button">More Projects</HashLink>
                 </div>
             </div>
     )

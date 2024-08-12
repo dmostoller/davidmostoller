@@ -13,6 +13,7 @@ import {
   Menu,
   Segment,
   Sidebar,
+  Button,
 } from 'semantic-ui-react'
 import Projects from './Projects';
 import Email from './Email';
@@ -20,6 +21,17 @@ import Bio from './Bio';
 
 import { ToastContainer } from "react-toastify";
 import { Link, Element, scroller, animateScroll as scroll, scrollSpy } from 'react-scroll';
+import resume from './assets/David-Mostoller-SE-Resume-Web-New.pdf'
+
+import reactIcon from './assets/react-svgrepo-com.svg'
+import pythonIcon from './assets/python-svgrepo-com.svg'
+import flaskIcon from './assets/flask-svgrepo-com.svg'
+import postgresqlIcon from './assets/postgresql-svgrepo-com.svg'
+import gear from './assets/gear.svg'
+import om from './assets/om-svgrepo-com.svg'
+import trident from './assets/trident-emblem-svgrepo-com.svg'
+
+import { SocialIcon } from 'react-social-icons'
 
 
 const { MediaContextProvider, Media } = createMedia({
@@ -31,23 +43,33 @@ const { MediaContextProvider, Media } = createMedia({
 })
 
 
-
 const HomepageHeading = () => (
   <Container style={{marginTop: "50px"}}>
         <div className='ui basic segment' style={{marginTop: "100px"}}>
             <div className="ui very relaxed stackable grid">
                 <div className="column">
                     <div className="ui left aligned inverted text container segment">
-                        {/* <h1 className="ui inverted header" style={{margin: "0px",fontSize: "3em"}}>Hi</h1> */}
-                        <h1 className='ui inverted header' style={{marginTop: "0px", marginBottom: "0px", fontSize: "3em"}}>I'm Dave,</h1>   
-                        <h1 className="ui inverted header" style={{marginTop: "0px", fontSize: "3em", color: "orange"}}>full-stack web developer</h1> 
-                        <div className='ui huge circular orange button' style={{marginTop: "25px"}} onClick={() => scroller.scrollTo('projects', {
+                  
+                        <h1 className='ui inverted header' style={{marginTop: "0px", marginBottom: "0px", fontSize: "3.5em"}}>
+                        {/* <img className="ui huge image" src={gear}></img> */}
+                          I'm Dave, 
+                        </h1>
+                        <h1 className="ui inverted header" style={{marginTop: "25px", marginBottom: "0px", fontSize: "3em", color: "orange"}}>a full-stack web developer,</h1>
+                        <h1 style={{marginTop: "35px", fontSize: "2em", color: "white"}}>focused on design and functionality.</h1>
+                        <div className='ui padded grid'> 
+                          <div className='ui huge circular orange button'  style={{ marginTop: "50px"}}
+                          onClick={() => scroller.scrollTo('projects', {
                           duration: 500,
                           delay: 0,
                           offset: -75,
                           smooth: 'easeInOutQuart'
                         })}>Discover My Projects</div>
                     </div>
+
+
+
+                    </div>
+
                 </div>  
             </div>
         </div>
@@ -121,9 +143,17 @@ class DesktopContainer extends Component {
                   onSetActive={handleSetActive}
                   >About
                 </Link>
-                {fixed &&
+                {fixed ?
                 <Menu.Item header position='right'>
                     DAVID MOSTOLLER
+                </Menu.Item>
+                :
+                <Menu.Item header position='right'>
+
+                  <a href="https://www.linkedin.com/in/david-mostoller/" target='_blank'><div className='ui inverted circular blue button' style={{marginLeft: "5px"}}><i className='linkedin icon'></i>LinkedIn</div></a>
+                  <a href={resume} content="My Resume" target='_blank' ><div className='ui inverted circular orange icon button' style={{marginLeft: "5px"}}>
+                    <i className='download icon'></i>  Resume
+                  </div></a>
                 </Menu.Item>
             }
               </Container>
@@ -217,8 +247,11 @@ class MobileContainer extends Component {
                   <Menu.Item onClick={this.handleToggle}>
                     <Icon name='sidebar' />
                   </Menu.Item>
-                  <Menu.Item header position='right' style={{verticalAlign: "top"}}>
-                    {/* DAVID MOSTOLLER */}
+                <Menu.Item position='right'>
+                  <a href="https://www.linkedin.com/in/david-mostoller/" target='_blank'><div className='ui inverted circular blue button' style={{marginLeft: "5px"}}><i className='linkedin icon'></i>LinkedIn</div></a>
+                  <a href={resume} content="My Resume" target='_blank' ><div className='ui inverted circular orange icon button' style={{marginLeft: "5px"}}>
+                    <i className='download icon'></i>  Resume
+                  </div></a>
                 </Menu.Item>
                 </Menu>
               </Container>
