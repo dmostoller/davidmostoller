@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 
 import robot from "./assets/robot-svgrepo-com.svg"
-import music from "./assets/sound-wave-svgrepo-com.svg"
+import music from "./assets/sound-svgrepo-com.svg"
 import planet from "./assets/planet-svgrepo-com.svg"
 import art from "./assets/art-brush-general-svgrepo-com.svg"
 
@@ -11,7 +11,7 @@ export default function Projects() {
 
 
   return (
-    <div className='element' name="projects" style={{marginTop: "100px"}}>
+    <div className='element' name="projects" id='projects' style={{marginTop: "100px"}}>
     <div className="ui fluid container" >
         <h1 className="ui centered header">Projects</h1>
         <div className='ui center aligned two column padded grid' style={{ marginBottom: "25px"}}>
@@ -28,7 +28,7 @@ export default function Projects() {
                         </div>
                     </Link>
 
-                    <div className="ui card" style={{margin: "25px", height: "200px", width: "350px"}}>
+                    <Link to='tutorbot' className="ui card" style={{margin: "25px", height: "200px", width: "350px"}}>
                         <div className="content">
                             <div className='icon header' style={{marginBottom:"0px"}}>
                                 <img className="ui mini image" src={robot}></img>
@@ -36,10 +36,11 @@ export default function Projects() {
                             </div>
                             <div className="meta"><h3>Contextual Video Chatbot Assistant</h3></div>
                         </div>
-                    </div>
+                    </Link>
                 </div>
                 <div className='column'>
-                    <div className="ui card" style={{margin: "25px", height: "200px", width: "350px"}}>
+                    
+                    <Link to='social-portfolio' className="ui card" style={{margin: "25px", height: "200px", width: "350px"}}>
                         <div className="content">
                             <div className="header" style={{marginBottom:"0px"}}>
                             <img className="ui mini image" src={art}></img>
@@ -47,9 +48,9 @@ export default function Projects() {
                             </div>
                             <div className="meta"><h3>Interactive Artist Showcase & Engagement Platform</h3></div>
                         </div>
-                    </div>
+                    </Link>
 
-                    <div className="ui card" style={{margin: "25px", height: "200px", width: "350px"}}>
+                    <Link to='mars-base' className="ui card" style={{margin: "25px", height: "200px", width: "350px"}}>
                         <div className="content">
                             <div className='header' style={{marginBottom:"0px"}}>
                             <img className="ui mini image" src={planet}></img>
@@ -57,7 +58,7 @@ export default function Projects() {
                             </div>
                             <div className="meta"><h3>Oregon Trail: In Space</h3></div>
                         </div>
-                    </div>
+                    </Link>
                 </div>
                 </div>
             </div>

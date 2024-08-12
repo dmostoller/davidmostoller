@@ -11,6 +11,9 @@ import Project from './MusiciansBase.jsx'
 import 'semantic-ui-css/semantic.min.css'
 import MusiciansBase from './MusiciansBase.jsx';
 import HomepageLayout from './HomepageLayout.jsx';
+import TutorBot from './TutorBot.jsx';
+import SocialPortfolio from './SocialPortfolio.jsx';
+import MarsBase from './MarsBase.jsx';
 
 const router = createBrowserRouter([
     {
@@ -25,6 +28,18 @@ const router = createBrowserRouter([
         {
           path: "/musicians-base",
           element: <MusiciansBase />,
+        },
+        {
+          path: "/tutorbot",
+          element: <TutorBot />,
+        },        
+        {
+          path: "/social-portfolio",
+          element: <SocialPortfolio />,
+        },
+        {
+          path: "/mars-base",
+          element: <MarsBase/>,
         },
       ]
     },
