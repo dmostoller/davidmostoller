@@ -13,13 +13,15 @@ import {
     FormTextArea,
     
   } from 'semantic-ui-react'
-import { Scrollbar, EffectFade, Autoplay } from 'swiper/modules';
+import { Scrollbar, EffectFade, Autoplay, Navigation } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/scrollbar';
 import 'swiper/css/effect-fade';
+
+import 'swiper/css/navigation';
 
 import marsThumb from './assets/project-thumbs/mars/1.png';
 
@@ -62,16 +64,17 @@ export default function ProjectModal({project}) {
                     <div className="ui fluid image">
                         <Swiper
                         // install Swiper modules
-                        modules={[ Scrollbar, Autoplay, EffectFade]}
+                        modules={[ Scrollbar, Autoplay, EffectFade, Navigation]}
                         spaceBetween={30}
                         slidesPerView={1}
                         loop={true}
                         effect='fade'
                         crossfade={true}
-                        autoplay={{
-                            delay: 3000,
-                            disableOnInteraction: false,
-                        }}
+                        navigation={true}
+                        // autoplay={{
+                        //     delay: 3000,
+                        //     disableOnInteraction: false,
+                        // }}
                         className='mySwiper'
                         scrollbar={{ draggable: true }}
                         // onSwiper={(swiper) => console.log(swiper)}
@@ -150,10 +153,10 @@ export default function ProjectModal({project}) {
                         loop={true}
                         effect='fade'
                         crossfade={true}
-                        autoplay={{
-                            delay: 3000,
-                            disableOnInteraction: false,
-                        }}
+                        // autoplay={{
+                        //     delay: 3000,
+                        //     disableOnInteraction: false,
+                        // }}
                         className='mySwiper'
                         scrollbar={{ draggable: true }}
                         // onSwiper={(swiper) => console.log(swiper)}

@@ -49,7 +49,7 @@ export default function Projects() {
         <h1 className="ui centered header">Projects</h1>
             <div className="ui very relaxed items">
                 <div className="item">
-                    <div className="ui large image">
+                    {/* <div className="ui large image">
                         <Swiper
                         // install Swiper modules
                         modules={[ Scrollbar, Autoplay, EffectFade]}
@@ -74,7 +74,7 @@ export default function Projects() {
                             <SwiperSlide><img src={m6} alt='music thumb 6'/></SwiperSlide>
                             <SwiperSlide><img src={m7} alt='music thumb 7'/></SwiperSlide>
                         </Swiper>
-                    </div>
+                    </div> */}
                     <div className="content">
                     { deviceSize > 768 &&
                         <ProjectModal project={'music'}/>
@@ -103,9 +103,9 @@ export default function Projects() {
                 </div>
 
                 <div className="item">
-                    <div className="ui large image">
+                    {/* <div className="ui large image">
                         <img src={t1} alt='chatbot thumb 1'/>
-                    </div>
+                    </div> */}
                     <div className="content">
                     { deviceSize > 768 &&
                         <ProjectModal project={'chatbot'}/>
@@ -131,7 +131,7 @@ export default function Projects() {
                 </div>
 
                 <div className="item">
-                    <div className="ui large image">
+                    {/* <div className="ui large image">
                         <Swiper
                         // install Swiper modules
                         modules={[ Scrollbar, Autoplay, EffectFade]}
@@ -156,7 +156,7 @@ export default function Projects() {
                             <SwiperSlide><img src={p5} alt='portfolio thumb 5'/></SwiperSlide>
                             <SwiperSlide><img src={p6} alt='portfolio thumb 6'/></SwiperSlide>
                         </Swiper>
-                    </div>
+                    </div> */}
                     <div className="content">
                     { deviceSize > 768 &&
                         <ProjectModal project={'portfolio'}/>
@@ -181,9 +181,9 @@ export default function Projects() {
                     </div>
                 </div>
                 <div className="item">
-                    <div className="ui large image">
+                    {/* <div className="ui large image">
                         <img src={marsThumb} alt='mars thumb'/>
-                    </div>
+                    </div> */}
                     <div className="content">
                     { deviceSize > 768 &&
                         <ProjectModal project={'mars'}/>
