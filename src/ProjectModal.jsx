@@ -1,5 +1,18 @@
-import React, { useState } from 'react';
-// import Swiper core and required modules
+import React, { useState } from 'react'
+import {
+    ModalHeader,
+    ModalDescription,
+    ModalContent,
+    ModalActions,
+    Button,
+    Modal,
+    MenuItem,
+    Form,
+    Icon,
+    FormField,
+    FormTextArea,
+    
+  } from 'semantic-ui-react'
 import { Scrollbar, EffectFade, Autoplay } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
@@ -7,9 +20,6 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/scrollbar';
 import 'swiper/css/effect-fade';
-
-import { Modal } from "semantic-ui-react";
-
 
 import marsThumb from './assets/project-thumbs/mars/1.png';
 
@@ -28,28 +38,28 @@ import p5 from './assets/project-thumbs/yasminmostoller/5.png';
 import p6 from './assets/project-thumbs/yasminmostoller/6.png';
 
 import t1 from './assets/project-thumbs/tutorbot/1.png';
-import ProjectModal from './ProjectModal';
 
-export default function Projects() {
-    const [projectModalOpen, setProjectModalOpen] = useState(false);
+export default function ProjectModal({project}) {
+    const [open, setOpen] = useState(false)
 
-    const deviceSize = window.innerWidth;
+    return (
+        <>
+        <Modal
+        closeIcon inverted
+        dimmer={"blurring"}
+        size={"fullscreen"}
+        onClose={() => setOpen(false)}
+        onOpen={() => setOpen(true)}
+        open={open}
+        trigger={<i className='ui right floated large grey link expand icon'></i>}
+      > 
+        <ModalHeader>Project</ModalHeader>
+        <ModalContent>
+          <ModalDescription>
 
-    function handlePOpen() {
-        setProjectModalOpen(true)
-    } 
-
-    function handlePClose() {
-        setProjectModalOpen(false)
-    } 
-
-  return (
-    <div className='element' name="projects" style={{marginTop: "100px"}}>
-    <div className="ui container" >
-        <h1 className="ui centered header">Projects</h1>
-            <div className="ui very relaxed items">
-                <div className="item">
-                    <div className="ui large image">
+            { project === 'music' &&
+                <div className="ui fluid card">
+                    <div className="ui fluid image">
                         <Swiper
                         // install Swiper modules
                         modules={[ Scrollbar, Autoplay, EffectFade]}
@@ -76,9 +86,6 @@ export default function Projects() {
                         </Swiper>
                     </div>
                     <div className="content">
-                    { deviceSize > 768 &&
-                        <ProjectModal project={'music'}/>
-                    }
                     <div className="header" style={{marginBottom:"0px"}}>Artist-Fan Interaction & Content Hub</div>
                     <div className="meta">React, Python, Flask, Javascript, SQLAlchemy, GeoPy, Cloudinary, PostgreSQL, WaveSurfer, Semantic-UI</div>
                     <div className="description" style={{marginTop: "0px"}}>
@@ -87,7 +94,7 @@ export default function Projects() {
                     enhance artist-audience connections by providing interactive features and a seamless user experience, showcasing 
                     my ability to develop solutions that drive user engagement and community building.
                     </div>
-                    <div className='extra'>
+                    <div className='extra' style={{paddingTop: "25px"}}>
                             <a href="https://github.com/dmostoller/musicians-base" target='_blank'>
                             <button className='ui basic small secondary button'><i className="github icon"></i>GitHub</button>
                             </a>
@@ -102,21 +109,22 @@ export default function Projects() {
                     </div>
                 </div>
 
-                <div className="item">
-                    <div className="ui large image">
+                }
+
+                { project === 'chatbot' &&
+                <div className="ui fluid card">
+                    <div className="ui fluid image">
                         <img src={t1} alt='chatbot thumb 1'/>
                     </div>
                     <div className="content">
-                    { deviceSize > 768 &&
-                        <ProjectModal project={'chatbot'}/>
-                    }
+                    <i className='ui right floated large grey link expand icon'></i>
                         <div className='header' style={{marginBottom:"0px"}}>Contextual Video Chatbot Assistant</div>
                         <div className="meta">React, Python, Flask, Javascript, CSS, ChatGPT, Llama-Index</div>
                         <div className="description" style={{marginTop: "0px"}}>A smart tool designed to answer 
                             user queries based on YouTube video content. By integrating video transcripts with ChatGPT and 
                             providing an interactive React front end, this project highlights my commitment to offering 
                             students personalized support and enhancing their learning experience through advanced AI technology.</div>
-                        <div className='extra'>
+                        <div className='extra' style={{paddingTop: "25px"}}>
                             <a href="https://github.com/dmostoller/youtube-playlist-chatbot" target='_blank'>
                                 <button className='ui basic small secondary button'><i className="github icon"></i>GitHub</button>
                             </a>
@@ -129,10 +137,12 @@ export default function Projects() {
                         </div>
                     </div>
                 </div>
+                }
 
-                <div className="item">
-                    <div className="ui large image">
-                        <Swiper
+                { project === 'portfolio' &&
+                <div className="ui fluid card">
+                    <div className="ui fluid image">
+                    <Swiper
                         // install Swiper modules
                         modules={[ Scrollbar, Autoplay, EffectFade]}
                         spaceBetween={30}
@@ -158,16 +168,14 @@ export default function Projects() {
                         </Swiper>
                     </div>
                     <div className="content">
-                    { deviceSize > 768 &&
-                        <ProjectModal project={'portfolio'}/>
-                    }
+                    <i className='ui right floated large grey link expand icon'></i>
                         <div className="header" style={{marginBottom:"0px"}}>Interactive Artist Showcase & Engagement Platform</div>
                         <div className="meta">React, Python, Flask, Javascript, SQLAlchemy, Semantic-UI, Cloudinary, PostgreSQL</div>
                         <div className-="description" style={{marginTop: "0px"}}>
                             A platform that enables an artist to showcase their work and engage with their 
                             audience through comments and feedback. This project was created to empower artists by 
                             providing them with a professional yet interactive online presence.</div>
-                            <div className='extra content'>
+                            <div className='extra' style={{paddingTop: "25px"}}>
                                 <a href="https://github.com/dmostoller/social-artist-portfolio" target='_blank'>
                                     <button className='ui secondary small basic button'><i className="github icon"></i>GitHub</button>
                                 </a>
@@ -180,14 +188,16 @@ export default function Projects() {
                         </div>
                     </div>
                 </div>
-                <div className="item">
-                    <div className="ui large image">
-                        <img src={marsThumb} alt='mars thumb'/>
+
+                }
+
+                { project === 'mars' &&
+                <div className="ui fluid card">
+                    <div className="ui fluid image">
+                    <img src={marsThumb} alt='mars thumb'/>
                     </div>
                     <div className="content">
-                    { deviceSize > 768 &&
-                        <ProjectModal project={'mars'}/>
-                    }
+                    <i className='ui right floated large grey link expand icon'></i>
                     <div className='header' style={{marginBottom:"0px"}}>Mars Base (Oregon Trail: In Space)</div>
                     <div className="meta">Python, SQLAlchemy, Playsound</div>
                     <div className='description' style={{marginTop: "0px"}}>
@@ -195,7 +205,7 @@ export default function Projects() {
                     This project sharpened my skills in game design, including implementing complex game logic, 
                     integrating multimedia elements like ASCII art and sound, and developing robust Python code structures.
                     </div>
-                    <div className="description">
+                    <div className="extra" style={{paddingTop: "25px"}}>
                         <a href="https://github.com/dmostoller/mars-base" target='_blank'>
                             <button className='ui basic secondary small button'><i className="github icon"></i>GitHub</button>
                         </a>
@@ -206,8 +216,15 @@ export default function Projects() {
                     </div>
                 </div>
 
-            </div>
-    </div>
-    </div>
-  );
+                }
+
+
+
+        </ModalDescription>
+        </ModalContent>
+        </Modal>
+        
+        
+        </>
+    )
 }
