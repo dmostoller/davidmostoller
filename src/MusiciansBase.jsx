@@ -11,8 +11,6 @@ import full1 from './assets/project-thumbs/superluminal/7.png';
 import full2 from './assets/project-thumbs/superluminal/6.png';
 
 
-
-
 export default function MusiciansBase() {
     useEffect(() => {
         window.scrollTo(0, 0)
