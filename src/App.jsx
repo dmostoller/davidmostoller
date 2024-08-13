@@ -12,11 +12,11 @@ import { Outlet } from "react-router-dom";
 function App() {
 
 
-  function calendly() {
-    Calendly.initBadgeWidget({ url: 'https://calendly.com/dmostoller/15-minute-coffee-virtual-chat', text: 'Schedule time with me', color: 'black', textColor: '#ffffff', branding: undefined}); 
-  }
+  // function calendly() {
+  //   Calendly.initBadgeWidget({ url: 'https://calendly.com/dmostoller/15-minute-coffee-virtual-chat', text: 'Schedule time with me', color: 'black', textColor: '#ffffff', branding: undefined}); 
+  // }
     
-  calendly();
+  // calendly();
   
   return (
     <>
@@ -25,24 +25,19 @@ function App() {
         <div className='social-sidebar'>
         <div className='ui one column grid'>
             <div className='column'>
-                <div style={{margin: "10px"}}  
-                // data-tooltip="My LinkedIn" 
-                // data-position="top right"
-                >
-                <SocialIcon className='social-button' target='_blank' url="https://www.linkedin.com/in/david-mostoller/" />
+                <div style={{margin: "10px"}}>
+                  <SocialIcon className='social-button' target='_blank' url="https://www.linkedin.com/in/david-mostoller/" />
                 </div>
-                <div style={{margin: "10px"}}  
-                // data-tooltip="My GitHub" 
-                // data-position="top right"
-                >
-                <SocialIcon className='social-button' target='_blank' url="https://github.com/dmostoller" />
+                <div style={{margin: "10px"}}>
+                  <SocialIcon className='social-button' target='_blank' url="https://github.com/dmostoller" />
                 </div>
-                <div style={{margin: "10px"}}  
-                // data-tooltip="My Blog" 
-                // data-position="bottom right"
-                >
-                <SocialIcon className='social-button' target='_blank' url="https://medium.com/@dmostoller" />
+                <div style={{margin: "10px"}}>
+                  <SocialIcon className='social-button' target='_blank' url="https://discord.com/users/kabayun" />
                 </div>
+                <div style={{margin: "10px"}}>
+                  <SocialIcon className='social-button' target='_blank' url="https://medium.com/@dmostoller" />
+                </div>
+
                 <div style={{margin: "10px"}}>
                 <Button
                 size='huge'

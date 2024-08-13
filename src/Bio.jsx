@@ -1,9 +1,16 @@
-import { Segment, Grid, Header, Button, Image, Icon } from "semantic-ui-react";
+import React, {useState} from "react";
+import { InlineWidget } from "react-calendly";
+
+
+import { Segment, Grid, Header, Button, Image, Icon, Portal } from "semantic-ui-react";
 import resume from './assets/David-Mostoller-SE-Resume-Web-New.pdf'
 import headshot from './assets/david-headshot-amtrak.jpg'
 import bikeShot from './assets/david-bike.jpg'
 
 export default function Bio() {
+
+  const [open, setOpen] = useState(false)
+
     return (
         <div className="ui text container">
         <Segment style={{ padding: '6em 0em' }}  className='element' name="about" basic vertical>
@@ -18,11 +25,35 @@ export default function Bio() {
             <p style={{ fontSize: '1.3em' }}>
                 In my free time you can catch me exploring Philly on my bike, making music, or enjoying a good sci-fi book. I am always looking to connect with others and learn new things.
             </p>
-            <p style={{ fontSize: '1.3em', textAlign: "center" }}>
-              <a href="https://calendly.com/dmostoller/15-minute-coffee-virtual-chat" target='_blank'>
-              Schedule a call on Calendly
-              </a>
-            </p>
+ 
+ 
+              <Portal
+                closeOnTriggerClick
+                openOnTriggerClick
+                trigger={
+                  <Button
+                    content={open ? 'Close Portal' : 'Schedule a Call'}
+                    negative={open}
+                    positive={!open}
+                    circular
+                    basic
+                    size="large"
+                  />
+                }
+                onClose={() => setOpen(false)}
+                onOpen={() => setOpen(true)}
+              >
+                <Segment
+              style={{
+                left: '40%',
+                position: 'fixed',
+                top: '10%',
+                zIndex: 1000,
+              }}>
+                <InlineWidget url="https://calendly.com/dmostoller/15-minute-coffee-virtual-chat" />
+                </Segment>
+        
+                </Portal>
 
           </Grid.Column>
           <Grid.Column floated='right'width={6}>
