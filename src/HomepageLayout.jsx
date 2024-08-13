@@ -309,6 +309,7 @@ const HomepageLayout = () => (
               <List.Item as='a' href="https://github.com/dmostoller" target="_blank">GitHub</List.Item>
               <List.Item as='a' href="https://medium.com/@dmostoller" target="_blank">Medium</List.Item>
               <List.Item as='a' href="https://calendly.com/dmostoller/15-minute-coffee-virtual-chat" target="_blank">Calendly</List.Item>
+              <List.Item as='a' href="https://discord.com/users/kabayun" target="_blank">Discord</List.Item>
             </List>
           </Grid.Column>
 
