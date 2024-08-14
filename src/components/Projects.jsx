@@ -1,13 +1,12 @@
 import { Link } from "react-router-dom";
 
-import robot from "./assets/robot-svgrepo-com.svg"
-import music from "./assets/sound-svgrepo-com.svg"
-import planet from "./assets/planet-svgrepo-com.svg"
-import art from "./assets/art-brush-general-svgrepo-com.svg"
+import robot from "../assets/robot-svgrepo-com.svg"
+import music from "../assets/sound-svgrepo-com.svg"
+import planet from "../assets/planet-svgrepo-com.svg"
+import art from "../assets/art-brush-general-svgrepo-com.svg"
 
 
 export default function Projects() {
-
 
 
   return (

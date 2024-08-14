@@ -1,6 +1,6 @@
 
 import './App.css'
-import HomepageLayout from './HomepageLayout'
+// import HomepageLayout from './HomepageLayout'
 import { SocialIcon } from 'react-social-icons'
 import { Button } from 'semantic-ui-react'
 import resume from './assets/David-Mostoller-SE-Resume-Web-New.pdf'

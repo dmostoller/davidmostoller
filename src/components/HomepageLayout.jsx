@@ -13,25 +13,22 @@ import {
   Menu,
   Segment,
   Sidebar,
-  Button,
 } from 'semantic-ui-react'
+
 import Projects from './Projects';
 import Email from './Email';
 import Bio from './Bio';
 
 import { ToastContainer } from "react-toastify";
 import { Link, Element, scroller, animateScroll as scroll, scrollSpy } from 'react-scroll';
-import resume from './assets/David-Mostoller-SE-Resume-Web-New.pdf'
+import resume from '../assets/David-Mostoller-SE-Resume-Web-New.pdf'
 
-import reactIcon from './assets/react-svgrepo-com.svg'
-import pythonIcon from './assets/python-svgrepo-com.svg'
-import flaskIcon from './assets/flask-svgrepo-com.svg'
-import postgresqlIcon from './assets/postgresql-svgrepo-com.svg'
-import gear from './assets/gear.svg'
-import om from './assets/om-svgrepo-com.svg'
-import trident from './assets/trident-emblem-svgrepo-com.svg'
+import reactIcon from '../assets/react-svgrepo-com.svg'
+import pythonIcon from '../assets/python-svgrepo-com.svg'
+import flaskIcon from '../assets/flask-svgrepo-com.svg'
+import postgresqlIcon from '../assets/postgresql-svgrepo-com.svg'
+import gear from '../assets/gear.svg'
 
-import { SocialIcon } from 'react-social-icons'
 
 
 const { MediaContextProvider, Media } = createMedia({
