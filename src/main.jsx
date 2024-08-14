@@ -7,13 +7,12 @@ import {
 import App from './App.jsx'
 import './index.css'
 import ErrorPage from './error-page.jsx';
-import Project from './MusiciansBase.jsx'
 import 'semantic-ui-css/semantic.min.css'
-import MusiciansBase from './MusiciansBase.jsx';
-import HomepageLayout from './HomepageLayout.jsx';
-import TutorBot from './TutorBot.jsx';
-import SocialPortfolio from './SocialPortfolio.jsx';
-import MarsBase from './MarsBase.jsx';
+import MusiciansBase from './components/MusiciansBase.jsx';
+import HomepageLayout from './components/HomepageLayout.jsx';
+import TutorBot from './components/TutorBot.jsx';
+import SocialPortfolio from './components/SocialPortfolio.jsx';
+import MarsBase from './components/MarsBase.jsx';
 
 const router = createBrowserRouter([
     {
