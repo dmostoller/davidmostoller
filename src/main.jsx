@@ -13,6 +13,7 @@ import HomepageLayout from './components/HomepageLayout.jsx';
 import TutorBot from './components/TutorBot.jsx';
 import SocialPortfolio from './components/SocialPortfolio.jsx';
 import MarsBase from './components/MarsBase.jsx';
+import SpaceJ from './components/SpaceJ.jsx';
 
 const router = createBrowserRouter([
     {
@@ -40,6 +41,10 @@ const router = createBrowserRouter([
           path: "/mars-base",
           element: <MarsBase/>,
         },
+        {
+          path: "/band-website",
+          element: <SpaceJ/>,
+        },
       ]
     },
   
@@ -48,7 +53,7 @@ const router = createBrowserRouter([
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  // <React.StrictMode>
+  <React.StrictMode>
     <RouterProvider router={router} />
-  // </React.StrictMode>,
+  </React.StrictMode>,
 )
