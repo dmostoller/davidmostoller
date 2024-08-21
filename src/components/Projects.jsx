@@ -4,6 +4,8 @@ import robot from "../assets/robot-svgrepo-com.svg"
 import music from "../assets/sound-svgrepo-com.svg"
 import planet from "../assets/planet-svgrepo-com.svg"
 import art from "../assets/art-brush-general-svgrepo-com.svg"
+import guitar from "../assets/guitar-svgrepo-com.svg"
+import task from "../assets/task-list-menu-document-svgrepo-com.svg"
 
 
 export default function Projects() {
@@ -16,7 +18,6 @@ export default function Projects() {
         <div className='ui center aligned two column padded grid' style={{ marginBottom: "25px"}}>
             <div className='ui stackable inverted link cards' style={{marginTop: "25px"}}>
                 <div className='column'>
-                    
                     <Link to='musicians-base' className="ui card" style={{margin: "25px", height: "200px", width: "350px"}}>
                         <div className="content">
                             <div className="header" style={{marginBottom:"0px"}}>
@@ -36,6 +37,17 @@ export default function Projects() {
                             <div className="meta"><h3>Contextual Video Chatbot Assistant</h3></div>
                         </div>
                     </Link>
+
+                    <Link to='band-website' className="ui card" style={{margin: "25px", height: "200px", width: "350px"}}>
+                        <div className="content">
+                            <div className='header' style={{marginBottom:"0px"}}>
+                            <img className="ui mini image" src={guitar}></img>
+                            <h1>Band Website</h1>
+                            </div>
+                            <div className="meta"><h3>An immersive online experience.</h3></div>
+                        </div>
+                    </Link>
+
                 </div>
                 <div className='column'>
                     
@@ -49,6 +61,16 @@ export default function Projects() {
                         </div>
                     </Link>
 
+                    <Link to='taskmaster' className="ui card" style={{margin: "25px", height: "200px", width: "350px"}}>
+                        <div className="content">
+                            <div className='header' style={{marginBottom:"0px"}}>
+                            <img className="ui mini image" src={task}></img>
+                            <h1>TaskMaster</h1>
+                            </div>
+                            <div className="meta"><h3>A sleek and functional task manager app.</h3></div>
+                        </div>
+                    </Link>
+
                     <Link to='mars-base' className="ui card" style={{margin: "25px", height: "200px", width: "350px"}}>
                         <div className="content">
                             <div className='header' style={{marginBottom:"0px"}}>
@@ -59,9 +81,15 @@ export default function Projects() {
                         </div>
                     </Link>
                 </div>
+
+                <div className="column">
+                   
+
+
                 </div>
-            </div>
+            </div>            
         </div>
+    </div>
     </div>
   );
 }
