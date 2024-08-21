@@ -14,6 +14,7 @@ import TutorBot from './components/TutorBot.jsx';
 import SocialPortfolio from './components/SocialPortfolio.jsx';
 import MarsBase from './components/MarsBase.jsx';
 import SpaceJ from './components/SpaceJ.jsx';
+import TaskMaster from './components/TaskMaster.jsx';
 
 const router = createBrowserRouter([
     {
@@ -44,6 +45,10 @@ const router = createBrowserRouter([
         {
           path: "/band-website",
           element: <SpaceJ/>,
+        },
+        {
+          path: "/taskmaster",
+          element: <TaskMaster/>,
         },
       ]
     },

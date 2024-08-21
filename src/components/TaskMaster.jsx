@@ -3,18 +3,15 @@ import React, { useEffect } from 'react';
 
 import { HashLink } from 'react-router-hash-link';
 
-// import { Link } from 'react-scroll';
+import task from "../assets/task-list-menu-document-svgrepo-com.svg"
 
-import guitar from "../assets/guitar-svgrepo-com.svg"
-
-import m1 from '../assets/project-thumbs/spaceJ/1.png';
-import m2 from '../assets/project-thumbs/spaceJ/2.png';
-import m3 from '../assets/project-thumbs/spaceJ/3.png';
-import full1 from '../assets/project-slides/spaceJ/1.png';
+import m1 from '../assets/project-thumbs/taskmaster/1.png';
+import m2 from '../assets/project-thumbs/taskmaster/2.png';
+import m3 from '../assets/project-thumbs/taskmaster/3.png';
 
 
 
-export default function SpaceJ() {
+export default function TaskMaster() {
     useEffect(() => {
         window.scrollTo(0, 0)
       }, [])
@@ -23,26 +20,26 @@ export default function SpaceJ() {
 
                 <div className="ui text container" >
                     <div className='ui fluid basic padded inverted compact segment' style={{marginTop: "50px"}}>
-                        {/* <a href="https://github.com/dmostoller/social-artist-portfolio" target='_blank'>
+                        <a href="https://github.com/dmostoller/taskmaster" target='_blank'>
                             <button className='ui right floated circular inverted button'><i className="github icon"></i>GitHub</button>
-                            </a> */}
+                            </a>
                         <div className="content">
                             <div className="header">
-                            <h1 style={{marginBottom: "0px"}}><img className="ui left floated mini image" src={guitar}></img>
-                                Band Website
+                            <h1 style={{marginBottom: "0px"}}><img className="ui left floated mini image" src={task}></img>
+                                TaskMaster
                             </h1>
                             <h2 style={{marginTop: "0px"}}>
-                                An immersive online experience for musicians and their fans.
+                                 A sleek and functional task manager app.
                                 </h2>
                             </div>
                             <div className="meta" style={{paddingTop: "10px"}}>
                                 <h3 style={{color: "grey"}}>
-                                React, Next.js, Javascript, Tailwind CSS, Vercel
+                                React, Tailwind CSS, Django
                                 </h3>
                             </div>
                             <div className="description" style={{paddingTop: "10px"}}>
                                 <h3>
-                                An beautiful and interactive website for a musician to showcase their music and events.
+                                TaskMaster is simple task manager app built with React, Tailwind CSS, and Django, empowering users to effortlessly manage their tasks and to-do lists.  
                                 </h3>
 
                                 {/* <h4>
@@ -70,9 +67,9 @@ export default function SpaceJ() {
                         <div className='column'>
                             <img className="ui rounded bordered image" src={m3} alt='3'></img>
                         </div>
-                        <div className='three column centered row'>
+                        {/* <div className='three column centered row'>
                             <img className="ui rounded bordered image" src={full1} alt='4'></img>
-                        </div>
+                        </div> */}
                     </div>
 
 
