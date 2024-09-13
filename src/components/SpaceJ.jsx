@@ -49,10 +49,10 @@ export default function SpaceJ() {
                                     <i className="video icon"></i>
                                     <a href="https://www.loom.com/share/6963e453b24648c7863de7ad8d490ec4" target='_blank'>Watch</a> a video demo
                                 </h4> */}
-                                {/* <h4 style={{marginTop: 0}}>
+                                <h4 style={{marginTop: 0}}>
                                     <i className="laptop code icon"></i>
-                                    <a href="https://yasminmostoller.com/" target='_blank'>Visit</a> a deployed version of the project
-                                </h4> */}
+                                    <a href="https://spacejesus.com/" target='_blank'>Visit</a> a deployed version of the project
+                                </h4>
 
                             </div>
                         </div>
