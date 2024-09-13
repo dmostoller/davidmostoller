@@ -37,7 +37,7 @@ export default function SpaceJ() {
                             </div>
                             <div className="meta" style={{paddingTop: "10px"}}>
                                 <h3 style={{color: "grey"}}>
-                                React, Next.js, Javascript, Tailwind CSS, Vercel
+                                React, Javascript, Tailwind CSS, Cloudinary, Wavesurfer 
                                 </h3>
                             </div>
                             <div className="description" style={{paddingTop: "10px"}}>
