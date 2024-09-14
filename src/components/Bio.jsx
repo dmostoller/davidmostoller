@@ -18,7 +18,7 @@ export default function Bio() {
 
     return (
         <div className="ui text container">
-        <Segment style={{ padding: '6em 0em' }}  className='element' name="about" basic vertical>
+        <Segment style={{ padding: '6em 0em 2em 0em'}}  className='element' name="about" basic vertical>
       <Grid container stackable verticalAlign='middle'>
         <Grid.Row>
           <Grid.Column width={10}>
