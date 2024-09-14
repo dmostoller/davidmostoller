@@ -28,7 +28,8 @@ import pythonIcon from '../assets/python-svgrepo-com.svg'
 import flaskIcon from '../assets/flask-svgrepo-com.svg'
 import postgresqlIcon from '../assets/postgresql-svgrepo-com.svg'
 import gear from '../assets/gear.svg'
-
+import wesIcon from '../assets/WU_Wordmark_FullColor_1450x425_Horiz_WebReady.png'
+import flatIcon from '../assets/flatiron-school-logo.png'
 
 
 const { MediaContextProvider, Media } = createMedia({
@@ -295,7 +296,10 @@ const HomepageLayout = () => (
 
 
     <Bio/>
-
+    <div className="ui center aligned text container" style={{marginTop: "0px",  marginBottom: "25px"}}>
+      <img src={wesIcon} alt="gear" style={{width: "300px"}}/>
+      <img src={flatIcon} alt="gear" style={{width: "170px"}}/>
+    </div>
     <Segment inverted vertical style={{ margin: '0em 0em 0em 0em', padding: '5em' }}>
       <Container textAlign='center'>
         <Grid divided inverted stackable>
