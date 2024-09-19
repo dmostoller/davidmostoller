@@ -4,7 +4,7 @@ import { InlineWidget } from "react-calendly";
 
 import { Segment, Grid, Header, Button, Image, Icon, Portal } from "semantic-ui-react";
 import resume from '../assets/David-Mostoller-SE-Resume-Web-New.pdf'
-import headshot from '../assets/david-headshot-amtrak.jpg'
+import headshot from '../assets/DBM-square.png'
 import bikeShot from '../assets/david-bike.jpg'
 
 export default function Bio() {
