@@ -3,7 +3,7 @@ import { InlineWidget } from "react-calendly";
 
 
 import { Segment, Grid, Header, Button, Image, Icon, Portal } from "semantic-ui-react";
-import resume from '../assets/David-Mostoller-SE-Resume-Web-New.pdf'
+import resume from '../assets/David-Mostoller-Resume-October-2024.pdf'
 import headshot from '../assets/DBM-square.png'
 import bikeShot from '../assets/david-bike.jpg'
 
