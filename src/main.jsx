@@ -15,6 +15,7 @@ import SocialPortfolio from './components/SocialPortfolio.jsx';
 import MarsBase from './components/MarsBase.jsx';
 import SpaceJ from './components/SpaceJ.jsx';
 import TaskMaster from './components/TaskMaster.jsx';
+import PhilaReact from './components/PhilaReact.jsx';
 
 const router = createBrowserRouter([
     {
@@ -50,6 +51,10 @@ const router = createBrowserRouter([
           path: "/taskmaster",
           element: <TaskMaster/>,
         },
+        {
+          path: "/philareact",
+          element: <PhilaReact />,
+        }
       ]
     },
   
