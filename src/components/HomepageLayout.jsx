@@ -21,13 +21,8 @@ import Bio from './Bio';
 
 import { ToastContainer } from "react-toastify";
 import { Link, Element, scroller, animateScroll as scroll, scrollSpy } from 'react-scroll';
-import resume from '../assets/David-Mostoller-SE-Resume-Web-New.pdf'
+import resume from '../assets/David-Mostoller-Resume-October-2024.pdf'
 
-import reactIcon from '../assets/react-svgrepo-com.svg'
-import pythonIcon from '../assets/python-svgrepo-com.svg'
-import flaskIcon from '../assets/flask-svgrepo-com.svg'
-import postgresqlIcon from '../assets/postgresql-svgrepo-com.svg'
-import gear from '../assets/gear.svg'
 import wesIcon from '../assets/WU_Wordmark_FullColor_1450x425_Horiz_WebReady.png'
 import flatIcon from '../assets/flatiron-school-logo.png'
 

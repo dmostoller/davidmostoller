@@ -1,22 +1,12 @@
 
 import './App.css'
-// import HomepageLayout from './HomepageLayout'
 import { SocialIcon } from 'react-social-icons'
 import { Button } from 'semantic-ui-react'
 import resume from './assets/David-Mostoller-Resume-October-2024.pdf'
 import { Outlet } from "react-router-dom";
 
 
-
-
 function App() {
-
-
-  // function calendly() {
-  //   Calendly.initBadgeWidget({ url: 'https://calendly.com/dmostoller/15-minute-coffee-virtual-chat', text: 'Schedule time with me', color: 'black', textColor: '#ffffff', branding: undefined}); 
-  // }
-    
-  // calendly();
   
   return (
     <>
