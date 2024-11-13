@@ -1,8 +1,7 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import { HashLink } from 'react-router-hash-link';
 
 import robot from "../assets/robot-svgrepo-com.svg"
-
 import m1 from '../assets/project-slides/tutorbot/1.png';
 import m2 from '../assets/project-slides/tutorbot/2.png';
 import m3 from '../assets/project-slides/tutorbot/3.png';
@@ -36,7 +35,6 @@ export default function TutorBot() {
                                 A smart tool that incorporates an interactive React front end and AI
                                 technology in order to enhance YouTube user learning experiences.
                                 </h3>
-
                                 <h4>
                                     <i className="video icon"></i>
                                     <a href="https://www.loom.com/share/54ffdd1cbc394c0c8b0ac4d3a3783097" target='_blank'>Watch</a> a video demo
@@ -45,7 +43,6 @@ export default function TutorBot() {
                                     <i className="laptop code icon"></i>
                                     <a href="https://superluminalpsy.com/learn" target='_blank'>Visit</a> a deployed version of the project
                                 </h4>
-
                             </div>
                         </div>
                     </div>

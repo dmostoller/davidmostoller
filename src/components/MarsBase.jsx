@@ -1,10 +1,7 @@
 
-import React, { useEffect } from 'react';
-
+import { useEffect } from 'react';
 import { HashLink } from 'react-router-hash-link';
-
 import mars from "../assets/planet-svgrepo-com.svg"
-
 import m1 from '../assets/project-slides/mars/1.png';
 import m2 from '../assets/project-slides/mars/2.png';
 import m3 from '../assets/project-slides/mars/3.png';

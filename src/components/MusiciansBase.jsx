@@ -1,15 +1,10 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 
 import { HashLink } from 'react-router-hash-link';
 import music from "../assets/sound-svgrepo-com.svg"
-
-
 import m1 from '../assets/project-slides/musicians/7.png';
 import m2 from '../assets/project-slides/musicians/4.png';
 import m3 from '../assets/project-slides/musicians/5.png';
-import full1 from '../assets/project-thumbs/superluminal/7.png';
-import full2 from '../assets/project-thumbs/superluminal/6.png';
-
 
 export default function MusiciansBase() {
     useEffect(() => {
@@ -25,7 +20,7 @@ export default function MusiciansBase() {
                             </a>
                         <div className="content">
                             <div className="header">
-                            <h1 style={{marginBottom: "0px"}}><img className="ui left floated mini image" src={music}></img>Musician's Base</h1>
+                            <h1 style={{marginBottom: "0px"}}><img className="ui left floated mini image" src={music}></img>Musician&apos;s Base</h1>
                             <h2 style={{marginTop: "0px"}}>Artist-Fan Interaction & Content Hub</h2>
                             </div>
                             <div className="meta" style={{paddingTop: "10px"}}>

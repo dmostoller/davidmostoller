@@ -1,15 +1,11 @@
 
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 
 import { HashLink } from 'react-router-hash-link';
-
 import task from "../assets/task-list-menu-document-svgrepo-com.svg"
-
 import m1 from '../assets/project-thumbs/taskmaster/1.png';
 import m2 from '../assets/project-thumbs/taskmaster/2.png';
 import m3 from '../assets/project-thumbs/taskmaster/3.png';
-
-
 
 export default function TaskMaster() {
     useEffect(() => {

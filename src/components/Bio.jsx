@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import {useState} from "react";
 import { InlineWidget } from "react-calendly";
 
 
@@ -26,7 +26,7 @@ export default function Bio() {
             </Header>
             
             {/* <p style={{ fontSize: '1.3em' }}>Hi, I'm Dave.</p> */}
-            <p style={{ fontSize: '1.3em' }}>I'm a software engineer focused on forging meaningful connections between users in dynamic online environments. I believe that building impactful technology emerges from iterative, team collaborations.</p>
+            <p style={{ fontSize: '1.3em' }}>I&apos;m a software engineer focused on forging meaningful connections between users in dynamic online environments. I believe that building impactful technology emerges from iterative, team collaborations.</p>
             <p style={{ fontSize: '1.3em' }}>
                 In my free time you can catch me exploring Philly on my <a onMouseOver={changePhoto} onMouseOut={changePhoto}> bike</a>, 
                 making music, or enjoying a good sci-fi book. I am always looking to connect with others and learn new things.
