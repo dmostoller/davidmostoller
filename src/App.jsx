@@ -10,7 +10,7 @@ function App() {
   
   return (
     <>
-     <div lassName='ui fluid container' id='detail'>
+     <div className='ui fluid container' id='detail'>
         <Outlet/>
         <div className='social-sidebar'>
         <div className='ui one column grid'>
@@ -27,7 +27,6 @@ function App() {
                 <div style={{margin: "10px"}}>
                   <SocialIcon className='social-button' target='_blank' url="https://medium.com/@dmostoller" />
                 </div>
-
                 <div style={{margin: "10px"}}>
                 <Button
                 size='huge'
@@ -37,7 +36,6 @@ function App() {
                 icon='download'
                 href={resume}
                 target='_blank'
-                // data-inverted="" 
                 data-tooltip="My Resume" 
                 data-position="bottom right">
                 </Button>
@@ -46,7 +44,6 @@ function App() {
         </div>
       </div>
       </div>
-      
     </>
   )
 }

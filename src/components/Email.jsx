@@ -1,5 +1,5 @@
 
-import React, { useRef, useState } from "react"
+import { useRef, useState } from "react"
 import emailjs from '@emailjs/browser';
 import { useFormik } from "formik";
 import * as yup from "yup";
@@ -9,22 +9,14 @@ import {
     ModalHeader,
     ModalDescription,
     ModalContent,
-    ModalActions,
     Button,
     Modal,
-    MenuItem,
-    Form,
     Icon,
-    FormField,
-    FormTextArea,
-    
   } from 'semantic-ui-react'
-
 
 const Email = () => {
     const form = useRef();
     const [open, setOpen] = useState(false)
-
 
     const formSchema = yup.object().shape({
         from_name: yup.string().required("please enter your name"),
@@ -39,7 +31,7 @@ const Email = () => {
             message:'',
           },
         validationSchema: formSchema,
-        onSubmit: (values) => {
+        onSubmit: () => {
             setLoading(true)
             emailjs.sendForm('service_jz3d31c', 'template_sau8r19', form.current, {
                 publicKey: '2CBV5usGCJRMr4WbB',

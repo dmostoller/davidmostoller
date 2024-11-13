@@ -1,18 +1,11 @@
 
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 
 import { HashLink } from 'react-router-hash-link';
-
-// import { Link } from 'react-scroll';
-
 import art from "../assets/art-brush-general-svgrepo-com.svg"
-
 import m1 from '../assets/project-slides/portfolio/1.png';
 import m2 from '../assets/project-slides/portfolio/2.png';
 import m3 from '../assets/project-slides/portfolio/4.png';
-import full1 from '../assets/project-thumbs/yasminmostoller/4.png';
-import full2 from '../assets/project-thumbs/yasminmostoller/3.png';
-
 
 export default function SocialPortfolio() {
     useEffect(() => {

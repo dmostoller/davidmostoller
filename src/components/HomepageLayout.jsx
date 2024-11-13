@@ -1,8 +1,6 @@
-/* eslint-disable max-classes-per-file */
-/* eslint-disable react/no-multi-comp */
 import { createMedia } from '@artsy/fresnel'
 import PropTypes from 'prop-types'
-import React, { Component } from 'react'
+import { Component } from 'react'
 import { InView } from 'react-intersection-observer'
 import {
   Container,
@@ -14,18 +12,14 @@ import {
   Segment,
   Sidebar,
 } from 'semantic-ui-react'
-
 import Projects from './Projects';
 import Email from './Email';
 import Bio from './Bio';
-
 import { ToastContainer } from "react-toastify";
-import { Link, Element, scroller, animateScroll as scroll, scrollSpy } from 'react-scroll';
+import { Link, scroller} from 'react-scroll';
 import resume from '../assets/David-Mostoller-Resume-October-2024.pdf'
-
 import wesIcon from '../assets/WU_Wordmark_FullColor_1450x425_Horiz_WebReady.png'
 import flatIcon from '../assets/flatiron-school-logo.png'
-import gearIcon from '/DM-logo-orange.png'
 
 const { MediaContextProvider, Media } = createMedia({
   breakpoints: {
@@ -45,7 +39,7 @@ const HomepageHeading = () => (
                   
                         <h1 className='ui inverted header' style={{marginTop: "0px", marginBottom: "0px", fontSize: "3.5em"}}>
                         {/* <img className="ui image" style={{width: "75px"}} src={gearIcon}></img> */}
-                          I'm Dave, 
+                          I&apos;m Dave, 
                         </h1>
                         <h1 className="ui inverted header" style={{marginTop: "25px", marginBottom: "0px", fontSize: "3em", color: "orange"}}>a full-stack web developer,</h1>
                         <h1 style={{marginTop: "35px", fontSize: "2em", color: "white"}}>focused on design and functionality.</h1>
@@ -58,15 +52,10 @@ const HomepageHeading = () => (
                           smooth: 'easeInOutQuart'
                         })}>Discover My Projects</div>
                     </div>
-
-
-
                     </div>
-
                 </div>  
             </div>
         </div>
-    
   </Container>
 )
 
@@ -74,7 +63,7 @@ HomepageHeading.propTypes = {
   mobile: PropTypes.bool,
 }
 
-const handleSetActive = (to) => {
+const handleSetActive = () => {
   // console.log(to);
 };
 
