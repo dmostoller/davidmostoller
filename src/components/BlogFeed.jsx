@@ -8,36 +8,32 @@ const BlogFeed = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  const stripCdata = (text) => {
-    return text.replace('<![CDATA[', '').replace(']]>', '');
-  };
-
   useEffect(() => {
     const fetchFeed = async () => {
       try {
-        // You'll need a CORS proxy if the RSS feed doesn't support CORS
-        const response = await fetch('https://medium.com/feed/@dmostoller');
-        const text = await response.text();
-        const parser = new DOMParser();
-        const xml = parser.parseFromString(text, 'text/xml');
-        const items = xml.querySelectorAll('item');
+        const API_KEY = import.meta.env.VITE_RSS2JSON_KEY || '';
+        const response = await fetch(
+          `https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@dmostoller&api_key=${API_KEY}`
+        );
 
+        if (!response.ok) {
+          throw new Error('Feed fetch failed');
+        }
+        const data = await response.json();
+
+        // Helper functions remain the same
         const getExcerpt = (html) => {
           const div = document.createElement('div');
           div.innerHTML = html;
           const firstP = div.querySelector('p');
           if (!firstP) return '';
 
-          // Keep links and formatting but make them safe
           const safeP = firstP.cloneNode(true);
-
-          // Convert links to proper format
           safeP.querySelectorAll('a').forEach((a) => {
             a.setAttribute('target', '_blank');
             a.setAttribute('rel', 'noopener noreferrer');
           });
 
-          // Replace &nbsp; with spaces
           return safeP.innerHTML
             .replace(/&nbsp;/g, ' ')
             .replace(/\s+/g, ' ')
@@ -51,25 +47,18 @@ const BlogFeed = () => {
           return firstImg ? firstImg.src : null;
         };
 
-        const feedData = Array.from(items).map((item) => {
-          const contentEncoded = item.getElementsByTagNameNS('*', 'encoded')[0]?.textContent || '';
-          const cleanContent = stripCdata(contentEncoded);
-          const excerpt = getExcerpt(cleanContent);
-          const imageUrl = getFirstImage(cleanContent);
-
-          return {
-            title: item.querySelector('title')?.textContent || '',
-            link: item.querySelector('link')?.textContent || '',
-            description: excerpt,
-            pubDate: item.querySelector('pubDate')?.textContent || '',
-            image: imageUrl
-          };
-        });
-        console.log('Processed items:', feedData.length);
+        const feedData = data.items.map((item) => ({
+          title: item.title,
+          link: item.link,
+          description: getExcerpt(item.description),
+          pubDate: item.pubDate,
+          image: item.thumbnail || getFirstImage(item.description)
+        }));
 
         setFeedItems(feedData);
         setIsLoading(false);
       } catch (err) {
+        console.error('Feed error:', err);
         setError('Failed to fetch blog feed');
         setIsLoading(false);
       }
