@@ -26,7 +26,7 @@ const HomepageHeading = () => (
     <div className="ui basic segment" style={{ marginTop: '100px' }}>
       <div className="ui very relaxed stackable grid">
         <div className="column">
-          <div className="ui left aligned inverted text container segment">
+          <div className="ui left aligned inverted text container">
             <h1
               className="ui inverted header"
               style={{ marginTop: '0px', marginBottom: '0px', fontSize: '3.5em' }}
@@ -43,10 +43,10 @@ const HomepageHeading = () => (
             <h1 style={{ marginTop: '35px', fontSize: '2em', color: 'white' }}>
               focused on design and functionality.
             </h1>
-            <div className="ui padded grid">
+            <div className="ui padded grid" style={{ paddingTop: '15px', paddingBottom: '50px' }}>
               <div
                 className="ui huge circular orange button"
-                style={{ marginTop: '50px' }}
+                style={{ marginTop: '25px', marginRight: '25px' }}
                 onClick={() =>
                   scroller.scrollTo('projects', {
                     duration: 500,
@@ -58,11 +58,7 @@ const HomepageHeading = () => (
               >
                 Discover My Projects
               </div>
-              <DomLink
-                to="blog"
-                className="ui huge circular blue button"
-                style={{ marginTop: '50px', marginLeft: '10px' }}
-              >
+              <DomLink to="blog" className="ui huge circular blue button" style={{ marginTop: '25px' }}>
                 Read My Blog
               </DomLink>
             </div>
