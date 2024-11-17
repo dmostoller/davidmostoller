@@ -105,6 +105,7 @@ const BlogFeed = () => {
                   style={{
                     marginRight: '1em',
                     maxHeight: '150px',
+                    width: 'auto',
                     objectFit: 'cover'
                   }}
                 />
