@@ -1,38 +1,45 @@
-import {useState} from "react";
-import { InlineWidget } from "react-calendly";
+import { useState } from 'react';
+import { InlineWidget } from 'react-calendly';
 
-
-import { Segment, Grid, Header, Button, Image, Icon, Portal } from "semantic-ui-react";
-import resume from '../assets/David-Mostoller-Resume-October-2024.pdf'
-import headshot from '../assets/DBM-square.png'
-import bikeShot from '../assets/david-bike.jpg'
+import { Segment, Grid, Header, Button, Image, Icon, Portal } from 'semantic-ui-react';
+import resume from '../assets/resume/David-Mostoller-Software-Engineer-Resume.pdf';
+import headshot from '../assets/DBM-square.png';
+import bikeShot from '../assets/david-bike.jpg';
 
 export default function Bio() {
+  const [open, setOpen] = useState(false);
+  const [photo, setPhoto] = useState(headshot);
 
-  const [open, setOpen] = useState(false)
-  const [photo, setPhoto] = useState(headshot)
-
-  function changePhoto(){
-    setPhoto(photo === headshot ? bikeShot : headshot)
+  function changePhoto() {
+    setPhoto(photo === headshot ? bikeShot : headshot);
   }
 
-    return (
-        <div className="ui text container">
-        <Segment style={{ padding: '6em 0em 2em 0em'}}  className='element' name="about" basic vertical>
-      <Grid container stackable verticalAlign='middle'>
-        <Grid.Row>
-          <Grid.Column width={10}>
-            <Header as='h4' style={{ fontSize: '2em', color:"gray"}}>A few words about me
-            </Header>
-            
-            {/* <p style={{ fontSize: '1.3em' }}>Hi, I'm Dave.</p> */}
-            <p style={{ fontSize: '1.3em' }}>I&apos;m a software engineer focused on forging meaningful connections between users in dynamic online environments. I believe that building impactful technology emerges from iterative, team collaborations.</p>
-            <p style={{ fontSize: '1.3em' }}>
-                In my free time you can catch me exploring Philly on my <a onMouseOver={changePhoto} onMouseOut={changePhoto}> bike</a>, 
-                making music, or enjoying a good sci-fi book. I am always looking to connect with others and learn new things.
-            </p>
- 
- 
+  return (
+    <div className="ui text container">
+      <Segment style={{ padding: '6em 0em 2em 0em' }} className="element" name="about" basic vertical>
+        <Grid container stackable verticalAlign="middle">
+          <Grid.Row>
+            <Grid.Column width={10}>
+              <Header as="h4" style={{ fontSize: '2em', color: 'gray' }}>
+                A few words about me
+              </Header>
+
+              {/* <p style={{ fontSize: '1.3em' }}>Hi, I'm Dave.</p> */}
+              <p style={{ fontSize: '1.3em' }}>
+                I&apos;m a software engineer focused on forging meaningful connections between users in
+                dynamic online environments. I believe that building impactful technology emerges from
+                iterative, team collaborations.
+              </p>
+              <p style={{ fontSize: '1.3em' }}>
+                In my free time you can catch me exploring Philly on my{' '}
+                <a onMouseOver={changePhoto} onMouseOut={changePhoto}>
+                  {' '}
+                  bike
+                </a>
+                , making music, or enjoying a good sci-fi book. I am always looking to connect with others and
+                learn new things.
+              </p>
+
               <Portal
                 closeOnTriggerClick
                 openOnTriggerClick
@@ -50,36 +57,38 @@ export default function Bio() {
                 onOpen={() => setOpen(true)}
               >
                 <Segment
-              style={{
-                left: '35%',
-                position: 'fixed',
-                top: '10%',
-                zIndex: 1000,
-              }}>
-                <InlineWidget url="https://calendly.com/dmostoller/15-minute-coffee-virtual-chat" />
+                  style={{
+                    left: '35%',
+                    position: 'fixed',
+                    top: '10%',
+                    zIndex: 1000
+                  }}
+                >
+                  <InlineWidget url="https://calendly.com/dmostoller/15-minute-coffee-virtual-chat" />
                 </Segment>
-        
-                </Portal>
-
-          </Grid.Column>
-          <Grid.Column floated='right'width={6}>
-            <Image bordered centered circular size='medium' src={photo} />
-            <Grid centered style={{marginTop: "25px"}}>
-                <Button icon labelPosition='left' 
-                size='huge'
-                href={resume}
-                basic
-                circular 
-                content="My Resume"
-                target='_blank'>
-                    <Icon name='download' />
-                    My Resume
+              </Portal>
+            </Grid.Column>
+            <Grid.Column floated="right" width={6}>
+              <Image bordered centered circular size="medium" src={photo} />
+              <Grid centered style={{ marginTop: '25px' }}>
+                <Button
+                  icon
+                  labelPosition="left"
+                  size="huge"
+                  href={resume}
+                  basic
+                  circular
+                  content="My Resume"
+                  target="_blank"
+                >
+                  <Icon name="download" />
+                  My Resume
                 </Button>
-            </Grid>
-          </Grid.Column>
-        </Grid.Row>
-      </Grid>
-    </Segment>
-        </div>
-    );
-    }
+              </Grid>
+            </Grid.Column>
+          </Grid.Row>
+        </Grid>
+      </Segment>
+    </div>
+  );
+}

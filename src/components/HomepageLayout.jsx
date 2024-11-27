@@ -9,7 +9,7 @@ import Bio from './Bio';
 import { ToastContainer } from 'react-toastify';
 import { Link, scroller } from 'react-scroll';
 import { Link as DomLink } from 'react-router-dom';
-import resume from '../assets/David-Mostoller-Resume-October-2024.pdf';
+import resume from '../assets/resume/David-Mostoller-Software-Engineer-Resume.pdf';
 import wesIcon from '../assets/WU_Wordmark_FullColor_1450x425_Horiz_WebReady.png';
 import flatIcon from '../assets/flatiron-school-logo.png';
 
