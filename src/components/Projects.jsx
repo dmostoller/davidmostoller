@@ -27,7 +27,12 @@ export default function Projects() {
             >
               <div className="content">
                 <div className="header" style={{ marginBottom: '0px' }}>
-                  <img className="ui tiny image" src={resumeIcon} alt="AI Resume Analyzer"></img>
+                  <img
+                    className="ui image"
+                    src={resumeIcon}
+                    style={{ width: '60px' }}
+                    alt="AI Resume Analyzer"
+                  ></img>
                   <h1 style={{ marginTop: '0px' }}>AI Resume Analyzer</h1>
                 </div>
                 <div className="meta">
