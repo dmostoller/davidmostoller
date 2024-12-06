@@ -14,6 +14,7 @@ import SpaceJ from './components/SpaceJ.jsx';
 import TaskMaster from './components/TaskMaster.jsx';
 import PhilaReact from './components/PhilaReact.jsx';
 import BlogFeed from './components/BlogFeed.jsx';
+import ResumeAnalyzer from './components/ResumeAnalyzer.jsx';
 
 const router = createBrowserRouter([
   {
@@ -52,6 +53,10 @@ const router = createBrowserRouter([
       {
         path: '/philareact',
         element: <PhilaReact />
+      },
+      {
+        path: '/resumeanalyzer',
+        element: <ResumeAnalyzer />
       },
       {
         path: '/blog',

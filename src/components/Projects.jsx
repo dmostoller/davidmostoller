@@ -7,6 +7,7 @@ import art from '../assets/art-brush-general-svgrepo-com.svg';
 import guitar from '../assets/guitar-svgrepo-com.svg';
 import task from '../assets/task-list-menu-document-svgrepo-com.svg';
 import philareact from '../assets/philareact.png';
+import resumeIcon from '../assets/resumeicon.png';
 import typenetwork from '../assets/typenetwork.png';
 import SRS from '../assets/srs-logo.png';
 import invoice from '../assets/invoice-receipt-svgrepo-com.svg';
@@ -18,6 +19,25 @@ export default function Projects() {
         <h1 className="ui centered header">Projects</h1>
         <div className="ui middle aligned center aligned grid" style={{ marginBottom: '25px' }}>
           <div className="ui centered stackable three link cards" style={{ marginTop: '25px' }}>
+            <Link
+              to="resumeanalyzer"
+              target="_blank"
+              className="ui card"
+              style={{ margin: '25px', height: '200px', width: '350px' }}
+            >
+              <div className="content">
+                <div className="header" style={{ marginBottom: '0px' }}>
+                  <img className="ui tiny image" src={resumeanalyzer} alt="AI Resume Analyzer"></img>
+                  <h1 style={{ marginTop: '0px' }}>AI Resume Analyzer</h1>
+                </div>
+                <div className="meta">
+                  <h3>
+                    Transforming the way job seekers optimize their resumes with AI-powered analysis and
+                    insights.
+                  </h3>
+                </div>
+              </div>
+            </Link>
             <Link
               to="philareact"
               target="_blank"
