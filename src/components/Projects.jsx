@@ -21,7 +21,6 @@ export default function Projects() {
           <div className="ui centered stackable three link cards" style={{ marginTop: '25px' }}>
             <Link
               to="resumeanalyzer"
-              target="_blank"
               className="ui card"
               style={{ margin: '25px', height: '200px', width: '350px' }}
             >
@@ -45,7 +44,6 @@ export default function Projects() {
             </Link>
             <Link
               to="philareact"
-              target="_blank"
               className="ui card"
               style={{ margin: '25px', height: '200px', width: '350px' }}
             >
@@ -61,6 +59,7 @@ export default function Projects() {
             </Link>
             <Link
               to="https://typenetwork.com/"
+              target="_blank"
               className="ui card"
               style={{ margin: '25px', height: '200px', width: '350px' }}
             >
