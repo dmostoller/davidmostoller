@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 
 import { HashLink } from 'react-router-hash-link';
 
-import resumeIcon from '../assets/resumeicon.png';
+import resumeIcon from '../assets/ai-resume-icon.png';
 
 import p1 from '../assets/project-thumbs/resume/1.png';
 import p2 from '../assets/project-thumbs/resume/2.png';

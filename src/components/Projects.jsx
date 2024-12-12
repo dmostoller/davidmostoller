@@ -7,7 +7,7 @@ import art from '../assets/art-brush-general-svgrepo-com.svg';
 import guitar from '../assets/guitar-svgrepo-com.svg';
 import task from '../assets/task-list-menu-document-svgrepo-com.svg';
 import philareact from '../assets/philareact.png';
-import resumeIcon from '../assets/resumeicon.png';
+import resumeIcon from '../assets/ai-resume-icon.png';
 import typenetwork from '../assets/typenetwork.png';
 import SRS from '../assets/srs-logo.png';
 import invoice from '../assets/invoice-receipt-svgrepo-com.svg';
