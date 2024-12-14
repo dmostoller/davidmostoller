@@ -23,15 +23,14 @@ const { MediaContextProvider, Media } = createMedia({
 
 const HomepageHeading = () => (
   <Container style={{ marginTop: '50px' }}>
-    <div className="ui basic segment" style={{ marginTop: '100px' }}>
+    <div className="ui basic segment">
       <div className="ui very relaxed stackable grid">
-        <div className="column">
-          <div className="ui left aligned inverted text container">
+        <div className="eight wide column">
+          <div className="ui left aligned inverted text container" style={{ marginTop: '100px' }}>
             <h1
               className="ui inverted header"
               style={{ marginTop: '0px', marginBottom: '0px', fontSize: '3.5em' }}
             >
-              {/* <img className="ui image" style={{width: "75px"}} src={gearIcon}></img> */}
               I&apos;m Dave,
             </h1>
             <h1
@@ -62,6 +61,29 @@ const HomepageHeading = () => (
                 Read My Blog
               </DomLink>
             </div>
+          </div>
+        </div>
+        <div className="eight wide column" style={{ marginLeft: '0px' }}>
+          <div
+            style={{
+              position: 'relative',
+              width: '100%',
+              maxWidth: '504px',
+              margin: '0 auto'
+            }}
+          >
+            <iframe
+              src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7273448503614271488"
+              height="600"
+              width="100%"
+              frameBorder="0"
+              allowFullScreen=""
+              title="Embedded post"
+              style={{
+                borderRadius: '8px',
+                boxShadow: '0 4px 8px rgba(0,0,0,0.1)'
+              }}
+            />
           </div>
         </div>
       </div>
